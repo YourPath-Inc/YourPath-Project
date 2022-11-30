@@ -2,7 +2,6 @@
 -- Wed Nov 30 12:21:47 2022
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -14,13 +13,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `yourpath` DEFAULT CHARACTER SET utf8 ;
+USE `yourpath` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`User`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`User` (
+CREATE TABLE IF NOT EXISTS `yourpath`.`User` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(20) NOT NULL,
   `apellido` VARCHAR(45) NOT NULL,
@@ -38,7 +37,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Punto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Punto` (
+CREATE TABLE IF NOT EXISTS `yourpath`.`Punto` (
   `punto_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `organizacion` VARCHAR(45) NOT NULL,

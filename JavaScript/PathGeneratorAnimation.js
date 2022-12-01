@@ -1,6 +1,5 @@
 const REPETICIONES = 10;
 const SAMPLETITLE = "Sample Title", SAMPLETEXT = "Hola mundo guapo mucho bonito";
-const VISIBLE = "visible", HIDDEN = "hidden";
 var isStart = true, isVisible = false;
 
 function generateDiv() {
@@ -30,16 +29,14 @@ function changeVisibilityDivs(num) {
 }
 
 $("#showPath").click(() => {
-        document.getElementById("pathContent").style.visibility = VISIBLE;
+        document.getElementById("pathContent").style.visibility = "visible";
         document.getElementById("pathContent").style.height = (REPETICIONES * 100) + "px";
         for (var i = 0; i < REPETICIONES; i++) {  
             changeVisibilityDivs(i + 1).then((datos) => {
-                console.log(datos.id);
-                datos.style.visibility = VISIBLE;
+                datos.style.visibility = "visible";
                 datos.style.width = "50%"; 
             });
         }
-        
 });
 
 generateDiv();

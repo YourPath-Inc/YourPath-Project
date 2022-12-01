@@ -87,17 +87,18 @@ body {
   border-top: 150px solid #505050;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .timeline {
   position: relative;
   width: 100vw;
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
-}
-.timeline *,
-.timeline *::before,
-.timeline *::after {
-  box-sizing: border-box;
 }
 
 .timeline::after {
@@ -109,6 +110,26 @@ body {
   bottom: 0;
   left: 50%;
   margin-left: -1px;
+}
+
+.timeline2 {
+  position: relative;
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline2::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #f5f5f5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  border: 1px dashed #505050;
 }
 
 .container {

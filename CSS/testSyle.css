@@ -1,0 +1,20 @@
+#pathContent {  
+    display: grid;
+    margin: 20px;
+    height: 0px;
+    background-color: coral;
+    max-height: 1000px;
+    transition: height 4s;
+}
+
+.point {
+    text-align: justify;
+    width: 0px;
+    background-color: red;
+    transition: width 4s;
+    visibility: hidden;
+}
+
+.start { justify-self: flex-start; }
+.end { justify-self: flex-end; }
+

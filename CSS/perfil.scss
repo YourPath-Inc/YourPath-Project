@@ -85,7 +85,7 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-  }
+}
 .timeline {
   position: relative;
   width: 100vw;
@@ -103,14 +103,32 @@ body {
   left: 50%;
   margin-left: -1px;
 }
-.timeline2 {
+.timeline_f {
   position: relative;
   width: 100vw;
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
 }
-.timeline2::after {
+.timeline_f::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #f5f5f5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  border: 1px dashed #e69232;
+}
+.timeline_c {
+  position: relative;
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.timeline_c::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -133,6 +151,7 @@ body {
 .container.right {
   left: 50%;
 }
+
 .container::after {
   content: "";
   position: absolute;
@@ -145,7 +164,7 @@ body {
   border-radius: 16px;
   z-index: 1;
 }
-.container.right::after{
+.container.right::after {
   left: -8px;
 }
 .container::before {
@@ -161,7 +180,14 @@ body {
 .container.right::before {
   left: 8px;
 }
-.container .date{
+.container.left_b{
+  right: 50px;
+}
+.container.left_b .date{
+  right: -100px;
+  max-width: 75px;
+}
+.container .date {
   position: absolute;
   display: inline-block;
   top: calc(50% - 8px);
@@ -173,12 +199,12 @@ body {
   z-index: 1;
 }
 .container.left .date {
-  right: -75px;
-  max-width: 100px;
+  right: -100px;
+  max-width: 75px;
 }
 .container.right .date {
   left: -150px;
-  max-width: 100px;
+  max-width: 75px;
 }
 .container .content {
   padding: 30px 90px 30px 30px;
@@ -197,7 +223,7 @@ body {
   font-weight: bold;
   color: #e8a860;
 }
-.container .content h3{
+.container .content h3 {
   font-size: 18px;
   color: #f5f5f5;
 }
@@ -207,9 +233,20 @@ body {
   line-height: 22px;
   color: #f5f5f5;
 }
-
+.timeline_c .container::before {
+  background: #696969;
+}
+.timeline_c .container .content{
+  background: #696969 ;
+}
+.timeline_f .container::before {
+  background: #696969;
+}
+.timeline_f .container .content{
+  background: #696969 ;
+}
 @media (max-width: 767.98px) {
-  .triangulo{
+  .triangulo {
     border-left: 90px solid transparent;
     border-right: calc(100vw - 90px) solid transparent;
     border-top: 100px solid #505050;

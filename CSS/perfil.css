@@ -112,7 +112,7 @@ body {
   margin-left: -1px;
 }
 
-.timeline2 {
+.timeline_f {
   position: relative;
   width: 100vw;
   max-width: 1140px;
@@ -120,7 +120,27 @@ body {
   padding: 15px 0;
 }
 
-.timeline2::after {
+.timeline_f::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #f5f5f5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  border: 1px dashed #e69232;
+}
+
+.timeline_c {
+  position: relative;
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline_c::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -179,6 +199,15 @@ body {
   left: 8px;
 }
 
+.container.left_b {
+  right: 50px;
+}
+
+.container.left_b .date {
+  right: -100px;
+  max-width: 75px;
+}
+
 .container .date {
   position: absolute;
   display: inline-block;
@@ -192,13 +221,13 @@ body {
 }
 
 .container.left .date {
-  right: -75px;
-  max-width: 100px;
+  right: -100px;
+  max-width: 75px;
 }
 
 .container.right .date {
   left: -150px;
-  max-width: 100px;
+  max-width: 75px;
 }
 
 .container .content {
@@ -230,6 +259,22 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #f5f5f5;
+}
+
+.timeline_c .container::before {
+  background: #696969;
+}
+
+.timeline_c .container .content {
+  background: #696969;
+}
+
+.timeline_f .container::before {
+  background: #696969;
+}
+
+.timeline_f .container .content {
+  background: #696969;
 }
 
 @media (max-width: 767.98px) {

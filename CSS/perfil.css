@@ -4,6 +4,25 @@ body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
+.container {
+  width: 0px;
+  visibility: hidden;
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  text-align: justify;
+  transition: width 1s;
+}
+
+.content {
+  height: 350px;
+}
+
+#timeline, #timeline_c, #timeline_f {
+  height: 0px;
+  visibility: hidden;
+}
+
 .navbar {
   background-color: #0c0c0c;
   color: #f5f5f5;
@@ -93,7 +112,7 @@ body {
   box-sizing: border-box;
 }
 
-.timeline {
+#timeline {
   position: relative;
   width: 100vw;
   max-width: 1140px;
@@ -101,7 +120,7 @@ body {
   padding: 15px 0;
 }
 
-.timeline::after {
+#timeline::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -112,7 +131,7 @@ body {
   margin-left: -1px;
 }
 
-.timeline_f {
+#timeline_f {
   position: relative;
   width: 100vw;
   max-width: 1140px;
@@ -120,7 +139,7 @@ body {
   padding: 15px 0;
 }
 
-.timeline_f::after {
+#timeline_f::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -132,7 +151,7 @@ body {
   border: 1px dashed #e69232;
 }
 
-.timeline_c {
+#timeline_c {
   position: relative;
   width: 100vw;
   max-width: 1140px;
@@ -140,7 +159,7 @@ body {
   padding: 15px 0;
 }
 
-.timeline_c::after {
+#timeline_c::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -150,13 +169,6 @@ body {
   left: 50%;
   margin-left: -1px;
   border: 1px dashed #505050;
-}
-
-.container {
-  padding: 15px 30px;
-  position: relative;
-  background: inherit;
-  width: 50%;
 }
 
 .container.left {
@@ -261,19 +273,19 @@ body {
   color: #f5f5f5;
 }
 
-.timeline_c .container::before {
+#timeline_c .container::before {
   background: #696969;
 }
 
-.timeline_c .container .content {
+#timeline_c .container .content {
   background: #696969;
 }
 
-.timeline_f .container::before {
+#timeline_f .container::before {
   background: #696969;
 }
 
-.timeline_f .container .content {
+#timeline_f .container .content {
   background: #696969;
 }
 
@@ -283,7 +295,7 @@ body {
     border-right: calc(100vw - 90px) solid transparent;
     border-top: 100px solid #505050;
   }
-  .timeline::after {
+  #timeline::after {
     left: 90px;
   }
   .container {

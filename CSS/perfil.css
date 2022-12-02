@@ -4,6 +4,46 @@ body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
+.lineUp {
+  -webkit-animation: 2s anim-lineUp ease-out;
+          animation: 2s anim-lineUp ease-out;
+}
+
+@-webkit-keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .container {
   width: 0px;
   visibility: hidden;
@@ -16,6 +56,10 @@ body {
 
 .content {
   height: 350px;
+}
+
+.content h2, .content h3, .content p {
+  visibility: hidden;
 }
 
 #timeline, #timeline_c, #timeline_f {

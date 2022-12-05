@@ -1,13 +1,13 @@
-package com.yourpath2.yourpath2;
+package com.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YourPath2ApplicationTests {
+class YourPathApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

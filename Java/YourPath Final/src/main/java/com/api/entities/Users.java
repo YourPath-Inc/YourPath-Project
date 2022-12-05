@@ -1,11 +1,16 @@
-package com.yourpath2.yourpath2.entities;
+package com.api.entities;
 
-import lombok.Data;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.Data;
 
 @Data
 @Entity
@@ -33,11 +38,4 @@ public class Users implements Serializable {
     private String descripcion;
     @Column(name="link")
     private String link;
-
-    //Coloca la fecha sola
-    @PrePersist
-    public void prePersist(){
-        this.fecha_nacimiento = new Date();
-    }
-
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourPath</title>
+    <link rel="stylesheet" href="../CSS/register.css" />
+  </head>
+  <body>
+    <div id="card">
+      <div id="card-content">
+        <div id="card-title">
+          <h2>YourPath</h2>
+          <div class="underline-title"></div>
+        </div>
+        <form method="post" class="form">
+          <label for="user-email" style="padding-top: 13px">
+            &nbsp;Email
+          </label>
+          <input
+            id="user-email"
+            class="form-content"
+            type="email"
+            name="email"
+            autocomplete="on"
+            required
+          />
+          <div class="form-border"></div>
+          <label for="user-password" style="padding-top: 22px"
+            >&nbsp;Password
+          </label>
+          <input
+            id="user-password"
+            class="form-content"
+            type="password"
+            name="password"
+            required
+          />
+          <div class="form-border"></div>
+          <label for="user-password-confirm" style="padding-top: 22px"
+            >&nbsp;Confirm Password
+          </label>
+          <input
+            id="user-password-confirm"
+            class="form-content"
+            type="password"
+            name="password-confirm"
+            required
+          />
+          <div class="form-border"></div>
+          <input id="submit-btn" type="submit" name="submit" value="SIGN UP" />
+        </form>
+        <div class="separador">
+            <div class="separador-content">
+                <div class="left-line"></div>
+                <div class="o">o</div>
+                <div class="right-line"></div>
+            </div>
+        </div>
+          <script
+            src="https://accounts.google.com/gsi/client"
+            async
+            defer
+          ></script>
+          <div
+            id="g_id_onload"
+            data-client_id="YOUR_GOOGLE_CLIENT_ID"
+            data-login_uri="https://your.domain/your_login_endpoint"
+            data-auto_prompt="false"
+          ></div>
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left"
+          ></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+body {
+  background: -webkit-linear-gradient(bottom, #e8a860, #e0841a);
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin: 0px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.navbar {
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  margin: 0px;
+  z-index: 100;
+  div.logo {
+    padding-left: 5px;
+  }
+  form {
+    display: flex;
+    position: relative;
+    width: 300px;
+    border-radius: 7rem;
+    flex-direction: row;
+    input[type="search"] {
+      width: 100%;
+      height: 30px;
+      background: #f5f5f5;
+      padding: 0 1.6rem;
+      border-radius: 7rem;
+      appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work/
+      position: relative;
+      button {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6rem;
+        font-weight: bold;
+        background: #e8a860;
+        border-radius: 0 7rem 7rem 0;
+      }
+    }
+  }
+  div.perfil_logo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    div.img_logo {
+      height: 50px;
+      min-width: 50px;
+      margin: 5px;
+      border-radius: 50%;
+      background-color: #e8a860;
+    }
+    div.usuario {
+      font-size: 18px;
+      padding-right: 20px;
+    }
+  }
+}
+.triangulo{
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 50px solid #505050;
+  left: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.timeline {
+  position: relative;
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0;
+  padding: 15px 0;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #505050;
+  top: 0;
+  bottom: 0;
+  left: 90px;
+  margin-left: -1px;
+}
+.container {
+  padding-left: 120px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  background: inherit;
+  width: 100%;
+  left: 0%;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #e8a860;
+  border: 2px solid #505050;
+  border-radius: 16px;
+  z-index: 1;
+  left: 82px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #505050;
+  z-index: 1;
+  left: 90px;
+}
+.container .form {
+  padding: 30px 30px 30px 90px;
+  background: #505050;
+  position: relative;
+  border-radius: 8px;
+}
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e8a860;
+}
+.container .content h3 {
+  font-size: 18px;
+  color: #f5f5f5;
+}

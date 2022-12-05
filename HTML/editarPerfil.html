@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourPath</title>
+    <link rel="stylesheet" href="../CSS/editarPerfil.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="buscador">
+            <form>
+                <input id="search" type="search" placeholder="Busca path..." autofocus required />
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="perfil_logo">
+            <div class="img_logo"></div>
+            <div class="usuario">Nombre Apeliido Apellido</div>
+        </div>
+    </nav>
+    <div class="triangulo">
+
+    </div>
+    <div class="timeline">
+        <div class="container">
+            <form class="form">
+                <p>Añadir punto</p>
+                <label for="titulo">Como se llama?</label><br>
+                <input type="text" id="titulo" name="titulo" placeholder="Ej. Coding Bootcamp en Java & SQL"><br><br>
+                <label for="location">Donde se realiza?</label><br>
+                <input type="text" id="location" name="location" placeholder="Ej. Fundación Esplai"><br><br>
+                <label for="init_date">Cuando empezaste / planeas empezar?</label><br>
+                <input type="month" id="init_date" name="init_date"><br><br>
+                <label for="end_date">Cuando finalizaste / planeas finalizar?</label><br>
+                <input type="month" id="end_date" name="end_date"><br><br>
+                <label for="description">Como es?</label><br>
+                <input type="text" id="description" name="description" placeholder="Ej. Aprendi a hacer un Hola Mundo muy feo">
+                <p>Elige el estado: </p>
+                <label for="state_done">Terminado </label>
+                <input type="radio" id="sate_done" name="state" value="done">
+                <label for="state_doing">En curso </label>
+                <input type="radio" id="sate_doing" name="state" value="doing">
+                <label for="state_todo">Planeado </label>
+                <input type="radio" id="sate_todo" name="state" value="todo">
+            </form>
+        </div>
+        <div class="container">
+            <form class="form">
+                <label for="name">Como te llamas?</label><br>
+                <input type="text" id="name" name="name" placeholder="Ej. Juan"><br><br>
+                <label for="surname">Cuales son tus apellios?</label><br>
+                <input type="text" id="surname" name="surname" placeholder="Ej. Garcia Rodriguez"><br><br>
+                <label for="email">Cual es tu correo?</label><br>
+                <input type="email" id="email" name="email" placeholder="Ej. juangaro1999@gmail.com"><br><br>
+                <label for="telf">Cual es tu numero de teléfono?</label><br>
+                <input type="tel" id="telf" name="telf" placeholder="Ej. 666666666"><br><br>
+                <label for="ubi">De donde eres?</label><br>
+                <input type="text" id="ubi" name="ubi" placeholder="Ej. Barcelona, Cataluña, España"><br><br>
+                <label for="fecha_nacimiento">Que día naciste?</label><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+                <label for="description_p">Como eres?</label><br>
+                <input type="text" id="description_p" name="description_p" placeholder="Describe como eres"><br><br>
+                <label for="linkedin">LinkedIn:</label><br>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/holamundo"><br><br>
+                <label for="git">GitHub:</label><br>
+                <input type="url" id="git" name="git"><br><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

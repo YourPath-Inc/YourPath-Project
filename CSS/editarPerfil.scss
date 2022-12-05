@@ -132,13 +132,48 @@ body {
   position: relative;
   border-radius: 8px;
 }
-.container .content h2 {
+.container .form h2 {
   margin: 0 0 10px 0;
   font-size: 24px;
   font-weight: bold;
   color: #e8a860;
 }
-.container .content h3 {
-  font-size: 18px;
+.container .form p {
   color: #f5f5f5;
 }
+
+.container .form label{
+  color: #f5f5f5;
+}
+
+.container input{
+  background-color: #505050;
+  border: 0px;  
+  border-bottom: #e0841a solid;
+  width: 75%;
+  font-size: 15px;
+  color: #f5f5f5;
+}
+
+.container textarea{
+  background-color: #505050;
+  border: 0px;  
+  border-bottom: #e0841a solid;
+  width: 75%;
+  font-size: 15px;
+  color: #f5f5f5;
+}
+
+.container #init_date, #end_date, #fecha_nacimiento {
+  width: 40%;
+  color: #f5f5f5;
+}
+
+.container label{
+  margin: 30px 20px;
+}
+
+#state_done, #state_doing, #state_todo{
+  width: 20px;
+}
+

@@ -14,7 +14,7 @@
     <name>YourPath2</name>
     <description>YourPath2</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>

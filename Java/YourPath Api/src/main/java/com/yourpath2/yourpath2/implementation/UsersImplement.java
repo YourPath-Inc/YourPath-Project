@@ -6,7 +6,6 @@ import com.yourpath2.yourpath2.interfaces.IUsersServices;
 import com.yourpath2.yourpath2.repository.UsersRepository;
 import com.yourpath2.yourpath2.utils.Helpers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -20,9 +19,18 @@ public class UsersImplement implements IUsersServices {
     private UsersRepository usersRepository;
 
     @Override
-    public Page<UsersDTO> findAll() {
-        Page<Users> users = this.usersRepository.findAll();
-        return users.map(this::convertoUsersDTO);
+    public List<UsersDTO> findAll() {
+        List<UsersDTO> dto = new ArrayList<>();
+        //Page<Users> users = this.usersRepository.findAll();
+        Iterable<Users> users = this.usersRepository.findAll();
+        for(Users user : users){
+            UsersDTO usersDTO = Helpers.ModelMapper().map(user, UsersDTO.class);
+            dto.add(usersDTO);
+        }
+
+        return dto;
+
+
 
     }
 

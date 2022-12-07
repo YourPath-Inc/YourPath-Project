@@ -1,33 +1,45 @@
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
-.navbar {
+nav {
   background-color: #0c0c0c;
   color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: 0px;
   z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
-.navbar div.logo {
-  padding-left: 5px;
+nav div.logo {
+  height: auto;
+  width: 75px;
+  margin: 5px 20px;
 }
-.navbar form {
+nav div.logo img {
+  width: 100%;
+  height: auto;
+}
+nav div.logo:hover {
+  box-shadow: 0px 10px 10px 0px #e0841a;
+}
+nav form {
   display: flex;
   position: relative;
   width: 300px;
   border-radius: 7rem;
   flex-direction: row;
 }
-.navbar form input[type=search] {
+nav form input[type=search] {
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: #f5f5f5;
   padding: 0 1.6rem;
   border-radius: 7rem;
@@ -36,38 +48,78 @@ body {
           appearance: none;
   position: relative;
 }
-.navbar form input[type=search] button {
+nav form button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  width: 6rem;
+  width: 40px;
+  height: 40px;
   font-weight: bold;
   background: #e8a860;
-  border-radius: 0 7rem 7rem 0;
+  border-radius: 50%;
+  border-radius: 7rem;
 }
-.navbar div.perfil_logo {
+nav div.perfil_logo {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  width: 300px;
 }
-.navbar div.perfil_logo div.img_logo {
+nav div.perfil_logo div.img_logo {
   height: 50px;
   min-width: 50px;
   margin: 5px;
   border-radius: 50%;
   background-color: #e8a860;
 }
-.navbar div.perfil_logo div.usuario {
+nav div.perfil_logo div.usuario {
   font-size: 18px;
-  padding-right: 20px;
+}
+nav div.perfil_logo .dropdown {
+  display: inline-block;
+  position: relative;
+}
+nav div.perfil_logo button {
+  background-color: #e0841a;
+  color: #0c0c0c;
+  font-size: 30px;
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+nav div.perfil_logo .dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100px;
+  overflow: auto;
+  right: 0;
+  background-color: #505050;
+  box-shadow: 0px 10px 10px 0px #0c0c0c;
+  z-index: 100;
+}
+nav div.perfil_logo .dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+}
+nav div.perfil_logo .dropdown-content a {
+  display: block;
+  color: #f5f5f5;
+  padding: 5px;
+  text-decoration: none;
+}
+nav div.perfil_logo .dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #e8a860;
 }
 
 .perfil {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-around;
   background-color: #505050;
   color: #f5f5f5;
@@ -78,12 +130,32 @@ body {
   min-width: 100px;
   padding: 10px;
 }
+.perfil .redes {
+  width: 100px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.perfil .redes img {
+  color: #f5f5f5;
+  font-size: 1.6em;
+  width: auto;
+  height: 50px;
+}
+.perfil .redes img .github {
+  border-radius: 50%;
+}
+.perfil .redes img:hover {
+  box-shadow: 0px 10px 10px 0px #0c0c0c;
+  border-radius: 50%;
+}
 
 .triangulo {
   width: 0;
   height: 0;
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
+  border-left: 49.3vw solid transparent;
+  border-right: 49.3vw solid transparent;
   border-top: 150px solid #505050;
 }
 
@@ -95,7 +167,7 @@ body {
 
 .timeline {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
@@ -114,7 +186,7 @@ body {
 
 .timeline_f {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
@@ -134,7 +206,7 @@ body {
 
 .timeline_c {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
@@ -280,7 +352,7 @@ body {
 @media (max-width: 767.98px) {
   .triangulo {
     border-left: 90px solid transparent;
-    border-right: calc(100vw - 90px) solid transparent;
+    border-right: calc(100% - 90px) solid transparent;
     border-top: 100px solid #505050;
   }
   .timeline::after {

@@ -1,22 +1,30 @@
 body {
-  background: -webkit-linear-gradient(bottom, #e8a860, #e0841a);
+  background: -webkit-linear-gradient(bottom, #e3bf96, #e0841a);
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   margin: 0px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
-.navbar {
+nav {
   background-color: #0c0c0c;
   color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: 0px;
   z-index: 100;
+  position: sticky;
+  top: 0;
   div.logo {
-    padding-left: 5px;
+    height: auto;
+    width: 75px;
+    margin: 5px 20px;
+    img{
+      width: 100%;
+      height: auto;
+    }
   }
   form {
     display: flex;
@@ -26,22 +34,26 @@ body {
     flex-direction: row;
     input[type="search"] {
       width: 100%;
-      height: 30px;
+      height: 40px;
       background: #f5f5f5;
       padding: 0 1.6rem;
       border-radius: 7rem;
-      appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work/
+      appearance: none; 
       position: relative;
-      button {
-        display: flex;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 6rem;
-        font-weight: bold;
-        background: #e8a860;
-        border-radius: 0 7rem 7rem 0;
-      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      font-weight: bold;
+      background: #e8a860;
+      border-radius: 50%;
+      border-radius: 7rem;
     }
   }
   div.perfil_logo {
@@ -49,7 +61,7 @@ body {
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    width: 300px;
+
     div.img_logo {
       height: 50px;
       min-width: 50px;
@@ -59,7 +71,45 @@ body {
     }
     div.usuario {
       font-size: 18px;
-      padding-right: 20px;
+    }
+    //DESPLEGABLE!!!!!!
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+    button{
+      background-color: #e0841a;
+      color: #0c0c0c;
+      font-size: 30px;
+      border-radius: 20%;
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      width: 100px;
+      overflow: auto;
+      right: 0;
+      background-color: #505050;
+      box-shadow: 0px 10px 10px 0px #0c0c0c;
+      z-index: 100;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+      right: 0;
+    }
+    .dropdown-content a {
+      display: block;
+      color: #f5f5f5;
+      padding: 5px;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      color: #FFFFFF;
+      background-color: #e8a860;
     }
   }
 }
@@ -78,7 +128,7 @@ body {
 }
 .timeline {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1140px;
   margin: 0;
   padding: 15px 0;
@@ -109,7 +159,7 @@ body {
   height: 16px;
   top: calc(50% - 8px);
   right: -8px;
-  background: #e8a860;
+  background: #505050;
   border: 2px solid #505050;
   border-radius: 16px;
   z-index: 1;
@@ -162,6 +212,8 @@ body {
   width: 75%;
   font-size: 15px;
   color: #f5f5f5;
+  max-width: 100%;
+  max-height: 100px;
 }
 
 .container #init_date, #end_date, #fecha_nacimiento {
@@ -169,11 +221,46 @@ body {
   color: #f5f5f5;
 }
 
-.container label{
-  margin: 30px 20px;
+.container p{
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 #state_done, #state_doing, #state_todo{
   width: 20px;
+  margin-left: 20px;
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #505050 inset !important;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #f5f5f5 !important;
+}
+
+#submit-btn {
+  background: #e0841a;
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #e0841a;
+  cursor: pointer;
+  color: #f5f5f5;
+  height: 42.3px;
+  margin-top: 20px;
+  left: 50px;
+  transition: 0.25s;
+  width: 300px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #a35f11;
+}

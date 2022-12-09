@@ -17,14 +17,12 @@ import lombok.Data;
 @Table(name="usuario")
 public class Users implements Serializable {
     @Id
-    @Column(name="user_id")
-    private int user_id;
+    @Column(name="email_id")
+    private String email;
     @Column(name="nombre")
     private String nombre;
     @Column(name="apellido")
     private String apellido;
-    @Column(name="email")
-    private String email;
     @Column(name="psswrd")
     private String psswrd;
     @Column(name="tel")
@@ -38,4 +36,7 @@ public class Users implements Serializable {
     private String descripcion;
     @Column(name="link")
     private String link;
+    @Column(name ="github")
+    private String github;
+    
 }

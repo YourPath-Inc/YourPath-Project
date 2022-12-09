@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.entities.Users;
@@ -22,4 +23,11 @@ public class ApiController {
 	public Iterable<Users> index() {
 		return userService.findAll();
 	}
+	
+	@GetMapping(value = "/email/", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Users GetUserByEmail(@RequestParam String email) {
+		return userService.();
+	}
+	
+
 }

@@ -1,5 +1,6 @@
 package com.api.services;
 
+import org.apache.tomcat.jni.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,10 @@ public class UserService {
 
     public Iterable<Users> findAll() {
         return usersRepository.findAll();
+       
+    }
+    
+    public Iterable<Users> findById(String email) {
+    	return usersRepository.findAllById();
     }
 }

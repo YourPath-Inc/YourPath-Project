@@ -2,6 +2,7 @@ body {
   width: 100%;
   margin: 0px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background: -webkit-linear-gradient(bottom, #e3bf96, #e0841a);
 }
 nav {
   background-color: #0c0c0c;
@@ -23,9 +24,6 @@ nav {
       width: 100%;
       height: auto;
     }
-  }
-  div.logo:hover{
-    box-shadow: 0px 10px 10px 0px #e0841a;
   }
   form {
     display: flex;
@@ -132,19 +130,19 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    #linkedin img:hover{
+      box-shadow: 0px 10px 10px 0px #0c0c0c;
+    }
+    #github img:hover{
+      box-shadow: 0px 10px 10px 0px #0c0c0c;
+      border-radius: 50%;
+    }
   }
   .redes img{
     color: #f5f5f5;
     font-size: 1.6em;
     width: auto;
     height: 50px;
-    .github{
-      border-radius: 50%;
-    }
-  }
-  .redes img:hover{
-    box-shadow: 0px 10px 10px 0px #0c0c0c;
-    border-radius: 50%;
   }
 }
 .triangulo {
@@ -187,12 +185,12 @@ nav {
   content: "";
   position: absolute;
   width: 2px;
-  background: #f5f5f5;
+  background: transparent;
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -1px;
-  border: 1px dashed #e69232;
+  border: 1px dashed #e0841a;
 }
 .timeline_c {
   position: relative;
@@ -205,7 +203,7 @@ nav {
   content: "";
   position: absolute;
   width: 2px;
-  background: #f5f5f5;
+  background: transparent;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -232,7 +230,7 @@ nav {
   height: 16px;
   top: calc(50% - 8px);
   right: -8px;
-  background: #e8a860;
+  background: #505050;
   border: 2px solid #505050;
   border-radius: 16px;
   z-index: 1;

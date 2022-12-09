@@ -2,6 +2,7 @@ body {
   width: 100%;
   margin: 0px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background: -webkit-linear-gradient(bottom, #e3bf96, #e0841a);
 }
 
 nav {
@@ -26,9 +27,6 @@ nav div.logo {
 nav div.logo img {
   width: 100%;
   height: auto;
-}
-nav div.logo:hover {
-  box-shadow: 0px 10px 10px 0px #e0841a;
 }
 nav form {
   display: flex;
@@ -137,18 +135,18 @@ nav div.perfil_logo .dropdown-content a:hover {
   flex-direction: column;
   justify-content: space-around;
 }
+.perfil .redes #linkedin img:hover {
+  box-shadow: 0px 10px 10px 0px #0c0c0c;
+}
+.perfil .redes #github img:hover {
+  box-shadow: 0px 10px 10px 0px #0c0c0c;
+  border-radius: 50%;
+}
 .perfil .redes img {
   color: #f5f5f5;
   font-size: 1.6em;
   width: auto;
   height: 50px;
-}
-.perfil .redes img .github {
-  border-radius: 50%;
-}
-.perfil .redes img:hover {
-  box-shadow: 0px 10px 10px 0px #0c0c0c;
-  border-radius: 50%;
 }
 
 .triangulo {
@@ -196,12 +194,12 @@ nav div.perfil_logo .dropdown-content a:hover {
   content: "";
   position: absolute;
   width: 2px;
-  background: #f5f5f5;
+  background: transparent;
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -1px;
-  border: 1px dashed #e69232;
+  border: 1px dashed #e0841a;
 }
 
 .timeline_c {
@@ -216,7 +214,7 @@ nav div.perfil_logo .dropdown-content a:hover {
   content: "";
   position: absolute;
   width: 2px;
-  background: #f5f5f5;
+  background: transparent;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -246,7 +244,7 @@ nav div.perfil_logo .dropdown-content a:hover {
   height: 16px;
   top: calc(50% - 8px);
   right: -8px;
-  background: #e8a860;
+  background: #505050;
   border: 2px solid #505050;
   border-radius: 16px;
   z-index: 1;

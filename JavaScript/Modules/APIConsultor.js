@@ -1,8 +1,6 @@
 const API_TEST_URL = "https://api.chucknorris.io/jokes/random";
 const API_URL = "";
 
-const HTMLResponse = document.querySelector("#app");
-
 async function getPoints() { 
     var result;
     await fetch(API_TEST_URL)

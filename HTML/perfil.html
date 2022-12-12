@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourPath</title>
+    <link rel="stylesheet" href="../CSS/perfil.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="buscador">
+            <form>
+                <input id="search" type="search" placeholder="Busca path..." autofocus required />
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="perfil_logo">
+            <div class="img_logo"></div>
+            <div class="usuario lineUp"></div>
+        </div>
+    </nav>
+    <div class="perfil">
+        <div class="foto">
+            FOTO
+        </div>
+        <div class="datos">
+            <ul>
+                <li>NOMBRE COMPLETO</li>
+                <li>FECHA NACIMIENTO</li>
+                <li>NUMERO TLF</li>
+                <li>CORREO</li>
+            </ul>
+        </div>
+        <div class="redes">
+            <ul>
+                <li>LINKEDIN</li>
+                <li>GITHUB</li>
+            </ul>
+        </div>
+    </div>
+    <div class="triangulo"></div>
+    <div id="timeline"></div>
+    <div id="timeline_c"></div>
+    <div id="timeline_f"></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="module" src="../JavaScript/Modules/PathContentGenerator.js"></script>
+    <script type="module" src="../JavaScript/Modules/PathAnimation.js"></script>
+    <script type="module" src="../JavaScript/PathUsefulness.js"></script>
+</body>
+</html>

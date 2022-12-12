@@ -5,6 +5,7 @@ a {
     background: -webkit-linear-gradient(bottom, #e8a860 , #e0841a);
     background-repeat: no-repeat;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin: 0;
   }
   label {
     font-size: 11pt;
@@ -120,3 +121,34 @@ a {
   .g_id_signin {
     margin-bottom: 16px;
   }
+  footer{
+    background-color: #0c0c0c;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: 50px;
+        margin: 5px 20px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .follow{
+        a{
+            color: #f5f5f5;
+        }
+    }
+    .derechos{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+}

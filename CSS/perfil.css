@@ -82,23 +82,23 @@ body {
   position: sticky;
   top: 0;
 }
-nav div.logo {
+.navbar div.logo {
   height: auto;
   width: 75px;
   margin: 5px 20px;
 }
-nav div.logo img {
+.navbar div.logo img {
   width: 100%;
   height: auto;
 }
-nav form {
+.navbar form {
   display: flex;
   position: relative;
   width: 300px;
   border-radius: 7rem;
   flex-direction: row;
 }
-nav form input[type=search] {
+.navbar form input[type=search] {
   width: 100%;
   height: 40px;
   background: #f5f5f5;
@@ -109,7 +109,7 @@ nav form input[type=search] {
           appearance: none;
   position: relative;
 }
-nav form button {
+.navbar form button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,27 +123,27 @@ nav form button {
   border-radius: 50%;
   border-radius: 7rem;
 }
-nav div.perfil_logo {
+.navbar div.perfil_logo {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
 }
-nav div.perfil_logo div.img_logo {
+.navbar div.perfil_logo div.img_logo {
   height: 50px;
   min-width: 50px;
   margin: 5px;
   border-radius: 50%;
   background-color: #e8a860;
 }
-nav div.perfil_logo div.usuario {
+.navbar div.perfil_logo div.usuario {
   font-size: 18px;
 }
-nav div.perfil_logo .dropdown {
+.navbar div.perfil_logo .dropdown {
   display: inline-block;
   position: relative;
 }
-nav div.perfil_logo button {
+.navbar div.perfil_logo button {
   background-color: #e0841a;
   color: #0c0c0c;
   font-size: 30px;
@@ -153,7 +153,7 @@ nav div.perfil_logo button {
   margin-right: 5px;
   margin-left: 10px;
 }
-nav div.perfil_logo .dropdown-content {
+.navbar div.perfil_logo .dropdown-content {
   display: none;
   position: absolute;
   width: 100px;
@@ -163,17 +163,17 @@ nav div.perfil_logo .dropdown-content {
   box-shadow: 0px 10px 10px 0px #0c0c0c;
   z-index: 100;
 }
-nav div.perfil_logo .dropdown:hover .dropdown-content {
+.navbar div.perfil_logo .dropdown:hover .dropdown-content {
   display: block;
   right: 0;
 }
-nav div.perfil_logo .dropdown-content a {
+.navbar div.perfil_logo .dropdown-content a {
   display: block;
   color: #f5f5f5;
   padding: 5px;
   text-decoration: none;
 }
-nav div.perfil_logo .dropdown-content a:hover {
+.navbar div.perfil_logo .dropdown-content a:hover {
   color: #FFFFFF;
   background-color: #e8a860;
 }
@@ -445,4 +445,34 @@ nav div.perfil_logo .dropdown-content a:hover {
     padding: 30px 30px 30px 90px;
     border-radius: 500px 0 0 500px;
   }
+}
+footer {
+  margin-top: 20px;
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .logo {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 50px;
+  margin: 5px 20px;
+}
+footer .logo img {
+  width: 100%;
+  height: auto;
+}
+footer .follow a {
+  color: #f5f5f5;
+}
+footer .derechos {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  font-size: 10px;
+  margin-right: 10px;
 }/*# sourceMappingURL=perfil.css.map */

@@ -10,7 +10,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <a href="home.html"><img src="../maquetacion/logo.png" alt="YourPath"></a>
+        </div>
         <div class="buscador">
             <form>
                 <input id="search" type="search" placeholder="Busca path..." autofocus required />
@@ -20,6 +22,14 @@
         <div class="perfil_logo">
             <div class="img_logo"></div>
             <div class="usuario lineUp"></div>
+            <div class="dropdown">
+                <button>≡</button>
+                <div class="dropdown-content">
+                <a href="perfil.html">Mi perfil</a>
+                <a href="editarPerfil.html">Editar perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
         </div>
     </nav>
     <div class="perfil">
@@ -35,10 +45,12 @@
             </ul>
         </div>
         <div class="redes">
-            <ul>
-                <li>LINKEDIN</li>
-                <li>GITHUB</li>
-            </ul>
+            <div id="linkedin">
+                <a href="#"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt=""></a>
+            </div>
+            <div id="github">
+                <a href="#"><img class="github_img" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="triangulo"></div>

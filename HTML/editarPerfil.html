@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourPath</title>
+    <link rel="stylesheet" href="../CSS/editarPerfil.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="../maquetacion/logo.png" alt="YourPath"></a>
+        </div>
+        <div class="buscador">
+            <form>
+                <input id="search" type="search" placeholder="Busca path..." autofocus required />
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="perfil_logo">
+            <div class="img_logo"></div>
+            <div class="usuario">Nombre Apeliido Apellido</div>
+            <div class="dropdown">
+                <button>≡</button>
+                <div class="dropdown-content">
+                <a href="perfil.html">Mi perfil</a>
+                <a href="editarPerfil.html">Editar perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="triangulo">
+
+    </div>
+    <div class="timeline">
+        <div class="container">
+            <form class="form">
+                <h2>Añadir punto en el camino</h2>
+                <p><label for="titulo">¿Cómo quieres titular esta parada en tu path?</label></p>
+                <input type="text" id="titulo" name="titulo" placeholder="Ej. Coding Bootcamp en Java & SQL" required maxlength="45">
+                <p><label for="location">¿Dónde se realiza la parada?</label></p>
+                <input type="text" id="location" name="location" placeholder="Ej. Fundación Esplai" required required maxlength="45">
+                <p><label for="init_date">¿Cuándo inicia esta parada?</label></p>
+                <input type="month" id="init_date" name="init_date" required>
+                <p><label for="end_date">¿Cuándo finaliza esta parada?</label></p>
+                <input type="month" id="end_date" name="end_date">
+                <p><label for="description">¿Qué te ha aportado esta parada?</label></p>
+                <textarea id="description" name="description" rows="5" placeholder="Ej. Aprendí a hacer un Hola Mundo muy feo..." required maxlength="200"></textarea>
+                <p>Elige el estado: </p>
+                <input type="radio" id="state_done" name="state" value="done" required>
+                <label for="state_done">Terminado </label>
+                <input type="radio" id="state_doing" name="state" value="doing" required> 
+                <label for="state_doing">En curso </label>
+                <input type="radio" id="state_todo" name="state" value="todo" required>
+                <label for="state_todo">Planeado </label>
+                <p></p>
+                <input id="submit-btn" type="submit" name="submit" value="Crear parada en mi PATH" />
+            </form>
+        </div>
+        <div class="container">
+            <form class="form">
+                <h2>¿Quieres modificar o añadir algún dato personal?</h2>
+                <p><label for="name">¿Cómo te llamas?</label></p>
+                <input type="text" id="name" name="name" placeholder="Ej. Juan" maxlength="20">
+                <p><label for="surname">¿Cuáles son tus apellios?</label></p>
+                <input type="text" id="surname" name="surname" placeholder="Ej. Garcia Rodriguez" maxlength="45">
+                <p><label for="email">¿Cúal es tu correo?</label></p>
+                <input type="email" id="email" name="email" placeholder="Ej. juangaro1999@gmail.com" maxlength="45">
+                <p><label for="telf">¿Cúal es tu número de teléfono?</label></p>
+                <input type="tel" id="telf" name="telf" placeholder="Ej. +34 666666666">
+                <p><label for="ubi">¿Dónde vives?</label></p>
+                <input type="text" id="ubi" name="ubi" placeholder="Ej. Barcelona, Cataluña, España" maxlength="45">
+                <p><label for="fecha_nacimiento">¿Qué día naciste?</label></p>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <p><label for="description_p">Cuéntanos algo más de tí</label></p>
+                <textarea id="description" name="description" rows="5" placeholder="Ej. Tus inquietudes, hobbies, objetivos futuros..." maxlength="200"></textarea>
+                <p><label for="linkedin">LinkedIn:</label></p>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/holamundo" maxlength="45">
+                <p><label for="git">GitHub:</label></p>
+                <input type="url" id="git" name="git" placeholder="https://www.github.com/in/holamundo" maxlength="45">
+                <p></p>
+                <input id="submit-btn" type="submit" name="submit" value="Añadir cambios a mi perfil" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

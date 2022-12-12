@@ -13,12 +13,9 @@ public class UserService {
     @Autowired
     UsersRepository usersRepository;
 
-    public Iterable<Users> findAll() {
-        return usersRepository.findAll();
-       
-    }
+    public Iterable<Users> findAll() { return usersRepository.findAll(); }
     
-    public Optional<Users> findById(Long id) {
-    	return usersRepository.findById(id);
-    }
+    public Optional<Users> findById(Long id) { return usersRepository.findById(id); }
+    
+    public void addUser(Users u) { usersRepository.save(u); }
 }

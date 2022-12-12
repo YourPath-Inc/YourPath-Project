@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,5 +48,15 @@ public class ApiController {
 			if (p.getUser_id() == user_id) { list.add(p); }
 		}
 		return list;
+	}
+	
+	@GetMapping(value = "/addPunto")
+	public void addPoint(@RequestBody Punto p) {
+		puntoService.addPunto(p);
+	}
+	
+	@PutMapping(value = "/addUser")
+	public void addUsers(@RequestBody Users u) { 
+		userService.addUser(u);
 	}
 }

@@ -12,11 +12,9 @@ public class PuntoService {
 	@Autowired
     PointRepository puntoRepositorio;
 
-    public List<Punto> findAll() {
-        return puntoRepositorio.findAll();
-    }
+    public List<Punto> findAll() { return puntoRepositorio.findAll(); }
     
-    public Optional<Punto> findById(Long id) {
-    	return puntoRepositorio.findById(id);
-    }
+    public Optional<Punto> findById(Long id) { return puntoRepositorio.findById(id); }
+    
+    public void addPunto(Punto p) { puntoRepositorio.save(p); }
 }

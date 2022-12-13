@@ -1,38 +1,76 @@
-const API_TEST_URL = "https://api.chucknorris.io/jokes/random";
-const API_URL = "";
+import { User } from './UserClass.js';
+import { Point } from './PointClass.js';
 
-async function getPoints() { 
-    var result;
-    await fetch(API_TEST_URL)
-    .then((response) => response.json())
-    .then((random) => {
-        var c = new Chuck(random.id, random.url, random.value)
-        result = c;
-    });
-    return result;
+const API_ROOT_URL = "http://localhost:8080/api";
+const GET_ALL_POINTS_URL = "/puntos?user_id=";
+/*
+function getPoints(id) { 
+    var queryResults = getQuery(API_ROOT_URL + GET_ALL_POINTS_URL + id);
+    var finalResult = [];
+    for (let id = 0; id < queryResults.length; id++) {
+        var element = queryResults[i];
+        finalResult.push(new Point(element.titulo, element.init_date, element.end_date, element.descripcion, element.state, element.location));
+    }
+    return finalResult;
 }
 
 function getPsswrdByEmail(email) {
-    getUser();
+    var result
+}
+
+async function getQuery(url) {
+    console.log(url);
+    var result;
+    await fetch(url, {
+        mode: "no-cors"
+      })
+    .then((response) => response.json())
+    .then((random) => {
+        result = c;
+    });
+    return result;
 }
 
 function addPoint(p) {}
 
 function addUser(user) {}
 
-function updateUserByEmail(email) {
-    getUser();
-    // 
+function getUser(id) {
+
 }
 
-function getUser(email) {}
+getPoints(1);
+*/
+const URL = API_ROOT_URL + GET_ALL_POINTS_URL + 1;
+const URL2 = 'http://localhost:8080/api/allUsers';
 
-getPoints().then((result) => console.log(result));
 
-class Chuck {
-    constructor(id, date, url) {
-        this.id = id;
-        this.date = date;
-        this.url = url;
+const data = {
+    optPost: 'myAPI',
+    message: 'We make a research of fetch'
+};
+
+async function displayItems()
+{
+
+    await fetch(URL2, {
+        'Accept':'application/json',
+        'Content-Type':'application/json', mode: 'no-cors'
     }
+   ).then(function (response) {
+	// The API call was successful!
+	if (response.ok) {
+		return response.json();
+	} else {
+		return Promise.reject(response);
+	}
+}).then(function (data) {
+	// This is the JSON from our response
+	console.log(data);
+}).catch(function (err) {
+	// There was an error
+	console.warn('Something went wrong.', err);
+});
 }
+
+displayItems();

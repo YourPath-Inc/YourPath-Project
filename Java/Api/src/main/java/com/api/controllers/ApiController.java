@@ -25,7 +25,7 @@ public class ApiController {
 	@Autowired
 	private PuntoService puntoService;
 
-	@GetMapping(value = "/allUsers")
+	@RequestMapping(value = "/allUsers")
 	public Iterable<Users> getAllUsers() {
 		return userService.findAll();
 	}

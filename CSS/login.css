@@ -22,6 +22,7 @@ label {
 
 #card {
   background: #f5f5f5;
+  border: solid #0c0c0c 2px;
   border-radius: 8px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   height: 500px;
@@ -48,9 +49,9 @@ label {
 
 #submit-btn {
   background: #e0841a;
-  border: none;
+  border: solid #0c0c0c 1.9px;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px #e0841a;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   cursor: pointer;
   color: #f5f5f5;
   height: 42.3px;
@@ -138,6 +139,17 @@ label {
 
 .g_id_signin {
   margin-bottom: 16px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #0c0c0c !important;
 }
 
 footer {

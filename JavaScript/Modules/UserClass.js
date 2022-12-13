@@ -1,4 +1,4 @@
-export class Point {
+export class User {
     constructor(name, surname, email, psswrd, tel, location, birth_date, description, link) {
         this.name = name;
         this.surname = surname;

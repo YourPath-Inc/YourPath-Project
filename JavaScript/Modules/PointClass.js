@@ -1,13 +1,17 @@
 export class Point {
-    constructor(title, location, description, date) {
+    constructor(title, initDate, endDate, description, state, location) {
         this.title = title;
-        this.location = location;
+        this.initDate = initDate;
+        this.endDate = endDate;
         this.description = description;
-        this.date = date;
+        this.state = state;
+        this.location = location;
     }
 
     getTitle() { return this.title; }
-    getLocation() { return this.location; }
+    getInitDate() { return this.initDate; }
+    getEndDate() { return this.endDate; }
     getDescription() { return this.description; }
-    getDate() { return this.date; }
+    getState() { return this.state; }
+    getLocation() { return this.location; }
 }

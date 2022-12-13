@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import com.api.services.PuntoService;
 import com.api.services.UserService;
 
 @RestController
+@CrossOrigin(origins = "*",maxAge = 3600)
 @RequestMapping("/api")
 public class ApiController {
 	@Autowired
@@ -25,17 +27,19 @@ public class ApiController {
 	@Autowired
 	private PuntoService puntoService;
 
-	@GetMapping(value = "/allUsers")
+	@RequestMapping(value = "/allUsers")
 	public Iterable<Users> getAllUsers() {
 		return userService.findAll();
 	}
 
 	@RequestMapping(value = "/user", params = "email")
 	public Optional<Users> getUserById(@RequestParam String email) {
+		System.out.println(email);
 		Iterable<Users> users = userService.findAll();
 		Users f = null;
 		for (Users u : users) {
-			if (u.getEmail() == email) { f = u; }
+			String aux = u.getEmail();
+			if (aux.equals(email)) { f = u; }
 		}
 		return userService.findById(f.getId());
 	}

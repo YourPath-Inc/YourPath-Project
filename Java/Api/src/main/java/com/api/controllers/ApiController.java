@@ -18,8 +18,8 @@ import com.api.entities.Users;
 import com.api.services.PuntoService;
 import com.api.services.UserService;
 
-@RestController
 @CrossOrigin(origins = "*")
+@RestController
 @RequestMapping("/api")
 public class ApiController {
 	@Autowired

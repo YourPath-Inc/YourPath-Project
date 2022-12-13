@@ -28,6 +28,10 @@ function addPoint(p) { setQuery(API_ROOT_URL + ADD_PUNTO, p); }
 function addUser(u) { setQuery(API_ROOT_URL + ADD_USER, u); }
 
 //addPoint(new Point(1, "Titulo", "2001-12-12", "2001-12-12", "Description", "State", "Location"));
-//getPointsByIdUser(1).then((data) => console.log(data));
+
+//Los GETS Funcionan correctamente
+getPointsByIdUser(1).then((data) => console.log(data));
+
+//Los SETS no
 addUser(new User("Name", "Surname", "1234@12345.es", "1234", 123456789, "Location", "2001-12-12", "Description", "Git", "linkedin"))
 

@@ -21,7 +21,7 @@ $(".triangulo").hover(() => {
 var arrayPoints = new Array(3);
 
 for (var i = 0; i < REPETICIONES; i++) {
-    var p = new Point(SAMPLETITLE, SAMPLELOCATION, SAMPLETEXT, SAMPLEDATE);
+    var p = new Point(1, SAMPLETITLE, SAMPLEDATE, SAMPLEDATE, SAMPLETEXT, "state", SAMPLELOCATION);
     arrayPoints[i] = p;
 }
 

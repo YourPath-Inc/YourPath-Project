@@ -1,5 +1,6 @@
 export class Point {
-    constructor(title, initDate, endDate, description, state, location) {
+    constructor(user_id, title, initDate, endDate, description, state, location) {
+        this.user_id = user_id;
         this.title = title;
         this.initDate = initDate;
         this.endDate = endDate;

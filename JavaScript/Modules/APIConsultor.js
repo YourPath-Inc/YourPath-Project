@@ -1,42 +1,33 @@
-import { User } from './UserClass.js';
-import { Point } from './PointClass.js';
+import { Point } from "./PointClass.js";
+import { User } from "./UserClass.js";
 
 const API_ROOT_URL = "http://localhost:8080/api";
 const GET_ALL_POINTS_URL = "/puntos?user_id=";
+const GET_USER = "/user?email=";
+const ADD_PUNTO = "/addPunto";
+const ADD_USER = "/addUser";
 
-function getPoints(id) { 
-    var queryResults = getQuery(API_ROOT_URL + GET_ALL_POINTS_URL + id);
-    var finalResult = [];
-    for (let id = 0; id < queryResults.length; id++) {
-        var element = queryResults[i];
-        finalResult.push(new Point(element.titulo, element.init_date, element.end_date, element.descripcion, element.state, element.location));
-    }
-    return finalResult;
-}
+export function getPointsByIdUser(id) { return getQuery(API_ROOT_URL + GET_ALL_POINTS_URL + id); }
 
-function getPsswrdByEmail(email) {
-    var result
-}
+export function getUserByEmail(email) { return getQuery(API_ROOT_URL + GET_USER + email); }
 
-async function getQuery(url) {
-    console.log(url);
-    var result;
-    await fetch(url, { mode: "no-cors" })
+function getQuery(url) {
+    return fetch(url)
     .then((response) => response.json())
-    .then((random) => {
-        result = c;
-    });
-    return result;
 }
 
-function addPoint(p) {}
-
-function addUser(user) {}
-
-function getUser(id) {
-
+function setQuery(url, data) {
+    fetch(url, {
+        method: 'SET',
+        body: data
+    }).then((result) => {
+        console.log('Success:', result) });
 }
+function addPoint(p) { setQuery(API_ROOT_URL + ADD_PUNTO, p); }
 
-getPoints(1);
+function addUser(u) { setQuery(API_ROOT_URL + ADD_USER, u); }
 
+//addPoint(new Point(1, "Titulo", "2001-12-12", "2001-12-12", "Description", "State", "Location"));
+//getPointsByIdUser(1).then((data) => console.log(data));
+addUser(new User("Name", "Surname", "1234@12345.es", "1234", 123456789, "Location", "2001-12-12", "Description", "Git", "linkedin"))
 

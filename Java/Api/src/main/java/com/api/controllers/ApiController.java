@@ -19,7 +19,7 @@ import com.api.services.PuntoService;
 import com.api.services.UserService;
 
 @RestController
-@CrossOrigin(origins = "*",maxAge = 3600)
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class ApiController {
 	@Autowired
@@ -44,7 +44,7 @@ public class ApiController {
 		return userService.findById(f.getId());
 	}
 	
-	@GetMapping(value = "/puntos", params = "user_id")
+	@RequestMapping(value = "/puntos", params = "user_id")
 	public Iterable<Punto> getPuntoByUserId(@RequestParam Long user_id) {
 		List<Punto> list = new ArrayList<Punto>();
 		Iterable<Punto> puntos = puntoService.findAll();
@@ -54,7 +54,7 @@ public class ApiController {
 		return list;
 	}
 	
-	@GetMapping(value = "/addPunto")
+	@PutMapping(value = "/addPunto")
 	public void addPoint(@RequestBody Punto p) {
 		puntoService.addPunto(p);
 	}

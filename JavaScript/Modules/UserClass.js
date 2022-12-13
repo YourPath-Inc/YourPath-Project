@@ -1,5 +1,5 @@
 export class User {
-    constructor(name, surname, email, psswrd, tel, location, birth_date, description, link) {
+    constructor(name, surname, email, psswrd, tel, location, birth_date, description, git, linkedin) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -8,7 +8,8 @@ export class User {
         this.location = location;
         this.birth_date = location;
         this.description = description;
-        this.link = link;
+        this.git = git;
+        this.linkedin = linkedin;
     }
 
     getName() { return this.name; }
@@ -19,5 +20,6 @@ export class User {
     getLocation() { return this.location; }
     getBirthDate() { return this.birth_date; }
     getDescription() { return this.description; }
-    getLink() { return this.link; }
+    getLinkedin() { return this.linkedin; }
+    getGit() { return this.git; }
 }

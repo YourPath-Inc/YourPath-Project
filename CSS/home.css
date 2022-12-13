@@ -92,7 +92,8 @@ nav .buttons .register {
 }
 
 .welcome {
-  background-image: url("../maquetacion/banner.jpg");
+  background-image: url("../maquetacion/homebg.webp");
+  background-color: #f5f5f5;
   background-position: center;
   height: 300px;
 }
@@ -102,14 +103,22 @@ nav .buttons .register {
   background-color: rgba(80, 80, 80, 0.8);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  width: 40%;
+  width: 50%;
   position: absolute;
-  left: 50%;
+  left: 10%;
   margin-top: 10px;
   color: #f5f5f5;
 }
-.welcome .description h2, .welcome .description h3, .welcome .description p {
-  margin: 5px 10px;
+.welcome .description h2 {
+  font-size: 32px;
+  margin: 10px 20px;
+}
+.welcome .description h3 {
+  font-size: 24px;
+  margin: 5px 40px;
+}
+.welcome .description p {
+  margin: 10px 40px;
 }
 
 .info {
@@ -123,7 +132,7 @@ nav .buttons .register {
   -webkit-backdrop-filter: blur(12px) saturate(100%);
   background: #e0841a;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid #0c0c0c;
   width: 45%;
   left: 60%;
   display: flex;
@@ -142,6 +151,9 @@ nav .buttons .register {
   width: 200px;
   background-color: #f5f5f5;
   border-radius: 50%;
+}
+.info .infoq .img_c img {
+  height: 100%;
 }
 
 footer {

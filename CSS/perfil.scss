@@ -178,16 +178,17 @@ body {
     #linkedin img:hover{
       box-shadow: 0px 10px 10px 0px #0c0c0c;
     }
-    #github img:hover{
-      box-shadow: 0px 10px 10px 0px #0c0c0c;
-      border-radius: 50%;
-    }
   }
-  .redes img{
+  .redes i{
     color: #f5f5f5;
-    font-size: 1.6em;
     width: auto;
-    height: 50px;
+    font-size: 50px;
+  }
+  .redes #linkedin i:hover{
+    color: #e0841a;
+  }
+  .redes #github i:hover{
+    color: #e0841a;
   }
 }
 .triangulo {
@@ -324,7 +325,7 @@ body {
   border-radius: 8px;
 }
 .container.right .content {
-  padding: 30px 30px 30px 90px;
+  padding: 30px 90px 30px 30px;
   border-radius: 8px;
 }
 

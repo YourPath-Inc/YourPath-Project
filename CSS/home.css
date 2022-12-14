@@ -68,6 +68,7 @@ nav .buttons {
 nav .buttons button {
   border: none;
   color: white;
+  font-weight: bold;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -80,7 +81,7 @@ nav .buttons button {
 nav .buttons button:hover {
   background-color: #f5f5f5;
   color: #0c0c0c;
-  font-weight: bold;
+  font-weight: bolder;
   margin: 3px 8px;
   padding: 12px 22px;
 }
@@ -101,8 +102,9 @@ nav .buttons .register {
   backdrop-filter: blur(12px) saturate(100%);
   -webkit-backdrop-filter: blur(12px) saturate(100%);
   background-color: rgba(80, 80, 80, 0.8);
+  border: solid #0c0c0c 2px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   width: 50%;
   position: absolute;
   left: 10%;
@@ -122,6 +124,8 @@ nav .buttons .register {
 }
 
 .info {
+  border-top: solid #0c0c0c 1px;
+  box-shadow: 1px 2px 8px rgb(0, 0, 0);
   padding: 50px;
   display: flex;
   flex-direction: row;
@@ -132,7 +136,8 @@ nav .buttons .register {
   -webkit-backdrop-filter: blur(12px) saturate(100%);
   background: #e0841a;
   border-radius: 25px;
-  border: 1px solid #0c0c0c;
+  border: 2px solid #0c0c0c;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   width: 45%;
   left: 60%;
   display: flex;

@@ -1,154 +1,164 @@
 a {
-    text-decoration: none;
-  }
-  body {
-    background: -webkit-linear-gradient(bottom, #e8a860 , #e0841a);
-    background-repeat: no-repeat;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    margin: 0;
-  }
-  label {
-    font-size: 11pt;
-  }
-  #forgot-pass {
-    color: #e0841a;
-    font-size: 10pt;
-    margin-top: 3px;
-    text-align: right;
-  }
-  #card {
-    background: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    height: 500px;
-    margin: 6rem auto 8.1rem auto;
-    width: 329px;
-  }
-  #card-content {
-    padding: 12px 44px;
-  }
-  #card-title {
-    letter-spacing: 4px;
-    padding-bottom: 23px;
-    padding-top: 13px;
-    text-align: center;
-  }
-  #signup {
-    color: #e0841a;
-    font-size: 10pt;
-    text-align: center;
-  }
-  #submit-btn {
-    background: #e0841a;
-    border: none;
-    border-radius: 21px;
-    box-shadow: 0px 1px 8px #e0841a;
-    cursor: pointer;
-    color: #f5f5f5;
-    height: 42.3px;
-    margin: 0 auto;
-    margin-top: 20px;
-    transition: 0.25s;
-    width: 153px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size: 16px;
+  text-decoration: none;
+}
+body {
+  background: -webkit-linear-gradient(bottom, #e8a860, #e0841a);
+  background-repeat: no-repeat;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  margin: 0;
+}
+label {
+  font-size: 11pt;
+}
+#forgot-pass {
+  color: #e0841a;
+  font-size: 10pt;
+  margin-top: 3px;
+  text-align: right;
+}
+#card {
+  background: #f5f5f5;
+  border: solid #0c0c0c 2px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 500px;
+  margin: 6rem auto 8.1rem auto;
+  width: 329px;
+}
+#card-content {
+  padding: 12px 44px;
+}
+#card-title {
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
+}
+#signup {
+  color: #e0841a;
+  font-size: 10pt;
+  text-align: center;
+}
+#submit-btn {
+  background: #e0841a;
+  border: solid #0c0c0c 1.9px;
+  border-radius: 21px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  color: #f5f5f5;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 20px;
+  transition: 0.25s;
+  width: 153px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #a35f11;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  background: #e0841a;
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  padding-top: 14px;
+}
+.underline-title {
+  background: #e0841a;
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 150px;
+}
+.separador {
+  margin: 10px 10px 10px;
+}
+.separador-content {
+  display: flex;
+  flex-direction: row;
+}
+.left-line {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  top: 0.45em;
+  height: 1px;
+  background-color: #757575;
+}
+.o {
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  margin-left: 18px;
+  margin-right: 18px;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #757575;
+}
+.right-line {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  top: 0.45em;
+  height: 1px;
+  background-color: #757575;
+}
+.g_id_signin {
+  margin-bottom: 16px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+}
 
-  }
-  #submit-btn:hover {
-    box-shadow: 0px 1px 18px #a35f11;
-  }
-  .form {
-    align-items: left;
-    display: flex;
-    flex-direction: column;
-  }
-  .form-border {
-    background: #e0841a;
-    height: 1px;
-    width: 100%;
-  }
-  .form-content {
-    background: #f5f5f5;
-    border: none;
-    outline: none;
-    padding-top: 14px;
-  }
-  .underline-title {
-    background: #e0841a;
-    height: 2px;
-    margin: -1.1rem auto 0 auto;
-    width: 150px;
-  }
-  .separador {
-    margin: 10px 10px 10px;
-  }
-  .separador-content {
+input:-webkit-autofill {
+  -webkit-text-fill-color: #0c0c0c !important;
+}
+footer {
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .logo {
     display: flex;
     flex-direction: row;
+    height: auto;
+    width: 50px;
+    margin: 5px 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
-  .left-line{
-    position: relative;
-    flex-grow: 1;
-    flex-shrink: 1;
-    top: .45em;
-    height: 1px;
-    background-color: #757575;
+  .follow {
+    a {
+      color: #f5f5f5;
+    }
   }
-  .o{
-    padding-left: 0;
-    padding-top: 0;
-    padding-right: 0;
-    margin-left: 18px;
-    margin-right: 18px;
-    flex-direction: column;
-    box-sizing: border-box;
+  .derechos {
     display: flex;
-    flex-shrink: 0;
-    align-items: stretch;
-    position: relative;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #757575;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    font-size: 10px;
+    margin-right: 10px;
   }
-  .right-line{
-    position: relative;
-    flex-grow: 1;
-    flex-shrink: 1;
-    top: .45em;
-    height: 1px;
-    background-color: #757575;
-  }
-  .g_id_signin {
-    margin-bottom: 16px;
-  }
-  footer{
-    background-color: #0c0c0c;
-    color: #f5f5f5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .logo{
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        width: 50px;
-        margin: 5px 20px;
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
-    .follow{
-        a{
-            color: #f5f5f5;
-        }
-    }
-    .derechos{
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        font-size: 10px;
-        margin-right: 10px;
-    }
 }

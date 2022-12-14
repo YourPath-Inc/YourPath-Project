@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -59,7 +60,7 @@ public class ApiController {
 		puntoService.addPunto(p);
 	}
 	
-	@PutMapping(value = "/addUser")
+	@PostMapping(value = "/addUser")
 	public void addUsers(@RequestBody Users u) { 
 		userService.addUser(u);
 	}

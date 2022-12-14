@@ -57,11 +57,11 @@
                 <input type="radio" id="state_todo" name="state" value="todo" required>
                 <label for="state_todo">Planeado </label>
                 <p></p>
-                <input id="submit-btn" type="submit" name="submit" value="Crear parada en mi PATH" />
+                <input id="point-submit-btn" class="submit-btn" type="submit" name="submit" value="Crear parada en mi PATH" />
             </form>
         </div>
         <div class="container">
-            <form class="form">
+            <form id="userForm" class="form">
                 <h2>¿Quieres modificar o añadir algún dato personal?</h2>
                 <p><label for="name">¿Cómo te llamas?</label></p>
                 <input type="text" id="name" name="name" placeholder="Ej. Juan" maxlength="20">
@@ -82,7 +82,7 @@
                 <p><label for="git">GitHub:</label></p>
                 <input type="url" id="git" name="git" placeholder="https://www.github.com/in/holamundo" maxlength="45">
                 <p></p>
-                <input id="submit-btn" type="submit" name="submit" value="Añadir cambios a mi perfil" />
+                <input id="user-submit-btn" class="submit-btn" type="submit" name="submit" value="Añadir cambios a mi perfil" />
             </form>
         </div>
     </div>
@@ -96,6 +96,8 @@
             <a href="#"><i class="fab fa-facebook-f"></i></a>
         </p></div>
         <div class="derechos"><p>© 2022 YourPath, S.A. Todos los derechos reservados en todo el mundo</p></div>
-    </footer>
+    </footer> <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="module" src="../JavaScript/Modules/APIConsultor.js"></script>
 </body>
 </html>

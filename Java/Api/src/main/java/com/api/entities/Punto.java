@@ -3,6 +3,8 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
@@ -12,6 +14,7 @@ import lombok.Data;
 @Table(name="punto")
 public class Punto {
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name="punto_id")
     private Long id;
     @Column(name="user_id")

@@ -260,7 +260,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #f5f5f5 !important;
 }
 
-.submit-btn {
+#user-submit-btn {
   background: #e0841a;
   border: solid #0c0c0c 1.9px;
   border-radius: 21px;
@@ -276,7 +276,27 @@ input:-webkit-autofill {
   font-size: 16px;
 }
 
-#submit-btn:hover {
+#point-submit-btn:hover {
+  box-shadow: 0px 1px 18px #a35f11;
+}
+
+#point-submit-btn {
+  background: #e0841a;
+  border: solid #0c0c0c 1.9px;
+  border-radius: 21px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  color: #f5f5f5;
+  height: 42.3px;
+  margin-top: 20px;
+  left: 50px;
+  transition: 0.25s;
+  width: 300px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
+}
+
+#user-submit-btn:hover {
   box-shadow: 0px 1px 18px #a35f11;
 }
 

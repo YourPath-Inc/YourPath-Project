@@ -1,0 +1,197 @@
+<html>
+<head>
+ <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+.header{
+    background-color:black;
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+}
+.header h1{
+    color:white;
+}
+
+</style>
+<body>
+
+<div class="container-fluid">
+    <div class="header">
+        <h1>Add Employees</h1>
+    </div>
+    <h2>Add Employee</h2>
+    <form name="details" onsubmit="addDetails()" method="post">
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="FirstName">FirstName *</label></strong>
+            <input type="text" class="form-control" name="fname">
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Branch *</label></strong>
+            <select class="form-control" placeholder="--Select Branch--" name="branch">
+                <option class="form-control" value="CSE">CSE</option>
+                <option class="form-control" value="ECE">ECE</option>
+                <option class="form-control" value="IT">IT</option>
+                <option class="form-control" value="MANAGEMENT">MANAGEMENT</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="FirstName">LastName *</label></strong>
+            <input type="text" class="form-control" name="lname">
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Date of Joining *</label></strong>
+            <input type="date" name="date" class="form-control">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Mobile Number *</label></strong>
+            <input type="text" class="form-control" name="mobile">
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Stream *</label></strong>
+            <select class="form-control" placeholder="--Select Branch--" name="stream">
+                <option class="form-control" value="CSE">CSE</option>
+                <option class="form-control" value="ECE">ECE</option>
+                <option class="form-control" value="IT">IT</option>
+                <option class="form-control" value="MANAGEMENT">MANAGEMENT</option>
+            </select>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">Date of Birth *</label></strong>
+            <input type="date" name="dob" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Language *</label></strong>
+            <select class="form-control" placeholder="--Select Language--" name="language">
+                <option class="form-control" value="Telugu">Telugu</option>
+                <option class="form-control" value="English">English</option>
+                <option class="form-control" value="Hindi">Hindi</option>
+                <option class="form-control" value="Oriya">Oriya</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">Email *</label></strong>
+            <input type="email" name="email" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="FirstName">Photograph *</label></strong>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">Gender *</label></strong><br>
+            <input name="gender" value="male" type="radio"/>
+            <label for="male">Male </label>
+            <input name="gender" value="female" type="radio"/>
+            <label for="female">Female </label>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">College *</label></strong>
+            <select class="form-control" placeholder="--Select College--" name="college">
+                <option class="form-control" value="RGUKT">RGUT</option>
+                <option class="form-control" value="VIT">VIT</option>
+                <option class="form-control" value="IIIT">IIIT</option>
+                <option class="form-control" value="IIT">IIT</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">Qualification *</label></strong>
+            <select class="form-control" placeholder="--Select College--" name="qualification">
+                <option class="form-control" value="BTECH">BTech</option>
+                <option class="form-control" value="MTECH">MTech</option>
+                <option class="form-control" value="MBA">MBA</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong><label for="DOB">Year of Graduation *</label></strong>
+            <select class="form-control" placeholder="--Select Year--" name="yog">
+                <option class="form-control" value="2017">2017</option>
+                <option class="form-control" value="2018">2018</option>
+                <option class="form-control" value="2019">2019</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <strong><label for="DOB">  </label></strong><br>
+            <button class="btn btn-success"type="submit">Add</button>
+
+        </div>
+    </div>
+    </form>
+</div>
+<script>
+var Name=localStorage.getItem("userData");
+var Obj=JSON.parse(Name);
+console.log(Obj);
+function addDetails(){
+    var fName=document.details.fname.value;
+    var lName=document.details.lname.value;
+    var branch=document.details.branch.value;
+    var mobile=document.details.mobile.value;
+    var doj=document.details.date.value;
+    var stream=document.details.stream.value;
+    var dob=document.details.dob.value;
+    var language=document.details.language.value;
+    var email=document.details.email.value;
+    var gender=document.details.gender.value;
+    var college=document.details.college.value;
+    var qualification=document.details.qualification.value;
+    var yog=document.details.yog.value;
+
+    Obj.employee.push(
+        {
+            "fName":fName,
+            "lName":lName,
+            "mobile":mobile,
+            "email":email, 
+            "image":'<img src="/home/chintu/Pictures/max volume.png" height="90" width="90"><br>',
+            "college":college,
+            "status":'<i class="fa fa-check-circle" style="color:green; font-size:3em" data-toggle="modal" data-target="#myModal"></i>'
+        }
+    );
+    console.log(Obj);
+    var Data=JSON.stringify(Obj);
+    //store the string format data in local storage
+    localStorage.setItem("userData", Data);
+    window.location='MainPage.html'; 
+}
+</script>
+</body>
+</html>

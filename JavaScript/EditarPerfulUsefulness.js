@@ -11,7 +11,7 @@ getUserByEmail(email).then((data) => {
     document.getElementById("telf").value = data.tel;
     document.getElementById("ubi").value = data.ubicacion;
     document.getElementById("fecha_nacimiento").value = data.fecha_nacimiento;
-    document.getElementById("descriptionU").value = data.descripcion;
+    document.getElementById("user-description").value = data.descripcion;
     document.getElementById("linkedin").value = data.link;
     document.getElementById("git").value = data.github;
     psswrd = data.psswrd;
@@ -25,7 +25,7 @@ $("#userForm").submit(function (e) {
     var tel = document.getElementById("telf").value;
     var ubi = document.getElementById("ubi").value;
     var date = document.getElementById("fecha_nacimiento").value;
-    var description = document.getElementById("descriptionU").value;
+    var description = document.getElementById("user-description").value;
     var link = document.getElementById("linkedin").value;
     var git = document.getElementById("git").value;
     var u = new User(id, email, name, surname, psswrd, tel, ubi, date, description, git, link);
@@ -40,7 +40,7 @@ $("#pointForm").submit(function (e) {
     var dateI = document.getElementById("init_date").value;
     var dateE = document.getElementById("end_date").value;
     var ubi = document.getElementById("ubi").value;
-    var descripcion = document.getElementById("descriptionP").value;
+    var descripcion = document.getElementById("point-description").value;
     var state;
     if (document.getElementById("state_done").checked) { state = document.getElementById("state_done").value; }
     else if (document.getElementById("state_doing").checked) { state = document.getElementById("state_doing").value; }

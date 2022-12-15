@@ -37,7 +37,7 @@
     </div>
     <div class="timeline">
         <div class="container">
-            <form class="form">
+            <form id="pointForm" class="form">
                 <h2>Añadir punto en el camino</h2>
                 <p><label for="titulo">¿Cómo quieres titular esta parada en tu path?</label></p>
                 <input type="text" id="titulo" name="titulo" placeholder="Ej. Coding Bootcamp en Java & SQL" required maxlength="45">
@@ -48,20 +48,20 @@
                 <p><label for="end_date">¿Cuándo finaliza esta parada?</label></p>
                 <input type="month" id="end_date" name="end_date">
                 <p><label for="description">¿Qué te ha aportado esta parada?</label></p>
-                <textarea id="description" name="description" rows="5" placeholder="Ej. Aprendí a hacer un Hola Mundo muy feo..." required maxlength="1000"></textarea>
+                <textarea id="descriptionP" name="description" rows="5" placeholder="Ej. Aprendí a hacer un Hola Mundo muy feo..." required maxlength="1000"></textarea>
                 <p>Elige el estado: </p>
-                <input type="radio" id="state_done" name="state" value="done" required>
+                <input type="radio" id="state_done" name="state" value="DONE" required>
                 <label for="state_done">Terminado </label>
-                <input type="radio" id="state_doing" name="state" value="doing" required> 
+                <input type="radio" id="state_doing" name="state" value="DOING" required> 
                 <label for="state_doing">En curso </label>
-                <input type="radio" id="state_todo" name="state" value="todo" required>
+                <input type="radio" id="state_todo" name="state" value="TODO" required>
                 <label for="state_todo">Planeado </label>
                 <p></p>
                 <input id="point-submit-btn" class="submit-btn" type="submit" name="submit" value="Crear parada en mi PATH" />
             </form>
         </div>
         <div class="container">
-            <form id="userForm" class="form">
+            <form id="userForm" class="form" onsubmit="return false">
                 <h2>¿Quieres modificar o añadir algún dato personal?</h2>
                 <p><label for="name">¿Cómo te llamas?</label></p>
                 <input type="text" id="name" name="name" placeholder="Ej. Juan" maxlength="20">
@@ -76,13 +76,13 @@
                 <p><label for="fecha_nacimiento">¿Qué día naciste?</label></p>
                 <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
                 <p><label for="description_p">Cuéntanos algo más de tí</label></p>
-                <textarea id="description" name="description" rows="5" placeholder="Ej. Tus inquietudes, hobbies, objetivos futuros..." maxlength="1000"></textarea>
+                <textarea id="descriptionU" name="description" rows="5" placeholder="Ej. Tus inquietudes, hobbies, objetivos futuros..." maxlength="1000"></textarea>
                 <p><label for="linkedin">LinkedIn:</label></p>
                 <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/holamundo" maxlength="45">
                 <p><label for="git">GitHub:</label></p>
                 <input type="url" id="git" name="git" placeholder="https://www.github.com/in/holamundo" maxlength="45">
                 <p></p>
-                <input id="user-submit-btn" class="submit-btn" type="submit" name="submit" value="Añadir cambios a mi perfil" />
+                <input id="user-submit-btn" class="submit-btn" type="submit" name="submit" value="Añadir cambios a mi perfil"/>
             </form>
         </div>
     </div>
@@ -98,6 +98,7 @@
         <div class="derechos"><p>© 2022 YourPath, S.A. Todos los derechos reservados en todo el mundo</p></div>
     </footer> <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="module" src="../JavaScript/EditarPerfulUsefulness.js"></script>
     <script type="module" src="../JavaScript/Modules/APIConsultor.js"></script>
 </body>
 </html>

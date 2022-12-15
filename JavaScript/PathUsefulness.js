@@ -3,9 +3,6 @@ import { generateDiv } from './Modules/PathContentGenerator.js';
 import { Point } from './Modules/PointClass.js';
 import { getPointsByIdUser } from "./Modules/APIConsultor.js"
 
-const REPETICIONES = 3;
-const SAMPLETITLE = "Bootcamp en aprender a escribir Hola Mundo", SAMPLELOCATION = "Cuenca, Cuenca, ClM, España", SAMPLEDATE = "Hoy";
-const SAMPLETEXT = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut ipsam dolorum officiis voluptas eaque. Ut dolor ea nam culpa repellat inventore nemo recusandae quasi ratione quidem, asperiores, aspernatur quibusdam eum.";
 const STATES = ["DONE", "DOING", "TODO"];
 
 $(".triangulo").hover(() => {
@@ -21,7 +18,6 @@ $(".triangulo").hover(() => {
 });
 
 var points = await getPointsByIdUser(1);
-console.log(points);
 var timelinePoints = [], timelinePointsC = [], timelinePointsF = [];
 
 for (var i = 0; i < points.length; i++) {
@@ -41,6 +37,10 @@ for (var i = 0; i < points.length; i++) {
 }
 
 generateDiv("timeline", timelinePoints);
-if (timelinePointsC[0] != undefined) { generateDiv("timeline_c", timelinePointsC); }
-
+generateDiv("timeline_c", timelinePointsC);
 generateDiv("timeline_f", timelinePointsF);
+
+document.getElementById("nameUser").innerHTML = "TestNameUser";
+document.getElementById("dateUser").innerHTML = "TestDateUser";
+document.getElementById("telUser").innerHTML = "TestTelUser";
+document.getElementById("emailUser").innerHTML = "TestEmailUser";

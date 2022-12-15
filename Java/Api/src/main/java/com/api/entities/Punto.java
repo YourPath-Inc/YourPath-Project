@@ -22,9 +22,9 @@ public class Punto {
     @Column(name="titulo")
     private String titulo;
     @Column(name="init_date")
-    private Date init_date;
+    private String init_date;
     @Column(name="end_date")
-    private Date end_date;
+    private String end_date;
     @Column(name="descripcion")
     private String descripcion;
     @Column(name="state")

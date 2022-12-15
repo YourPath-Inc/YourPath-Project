@@ -35,7 +35,6 @@ public class ApiController {
 
 	@RequestMapping(value = "/user", params = "email")
 	public Optional<Users> getUserById(@RequestParam String email) {
-		System.out.println(email);
 		Iterable<Users> users = userService.findAll();
 		Users f = null;
 		for (Users u : users) {
@@ -55,8 +54,9 @@ public class ApiController {
 		return list;
 	}
 	
-	@PutMapping(value = "/addPunto")
+	@PostMapping(value = "/addPunto")
 	public void addPoint(@RequestBody Punto p) {
+		System.out.println(p.toString());
 		puntoService.addPunto(p);
 	}
 	
@@ -64,4 +64,11 @@ public class ApiController {
 	public void addUsers(@RequestBody Users u) { 
 		userService.addUser(u);
 	}
+	
+	@PostMapping(value = "/updateUser", params = "user_id")
+	public void updateUSer(@RequestBody Users u, @RequestParam Long user_id) { 
+		u.setId(user_id);
+		userService.addUser(u);
+	}
+	
 }

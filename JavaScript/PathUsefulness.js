@@ -1,7 +1,8 @@
 import { showTimeline } from './Modules/PathAnimation.js';
 import { generateDiv } from './Modules/PathContentGenerator.js';
 import { Point } from './Modules/PointClass.js';
-import { getPointsByIdUser } from "./Modules/APIConsultor.js"
+import { getPointsByIdUser, getUserByEmail } from "./Modules/APIConsultor.js"
+import { show } from "./Modules/LocalStorage.js"
 
 const STATES = ["DONE", "DOING", "TODO"];
 
@@ -17,7 +18,8 @@ $(".triangulo").hover(() => {
     }, 8000);
 });
 
-var points = await getPointsByIdUser(1);
+var id = await getUserByEmail(show()).id;
+var points = await getPointsByIdUser(id);
 var timelinePoints = [], timelinePointsC = [], timelinePointsF = [];
 
 for (var i = 0; i < points.length; i++) {

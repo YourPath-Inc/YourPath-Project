@@ -1,8 +1,9 @@
 import {addPoint, addUser, getUserByEmail, updateUserById} from "./Modules/APIConsultor.js"
 import { User } from "./Modules/UserClass.js"
 import { Point } from "./Modules/PointClass.js"
+import { show } from "./Modules/LocalStorage.js"
 
-var email = "email@email.com"; //Cambiar esto por los datos que se pasen
+var email = show();
 var psswrd, id;
 getUserByEmail(email).then((data) => {
     document.getElementById("name").value = data.nombre;

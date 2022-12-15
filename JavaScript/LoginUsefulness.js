@@ -8,7 +8,7 @@ import { store } from "./Modules/LocalStorage.js"
         if (data.email == email && data.psswrd == psswrd) {
             console.log("happy");
             store(email);
-            //cambio de pagina
+            window.location.replace("../HTML/perfil.html");
         } else { errorAlert(); }
     }).catch((error) => { errorAlert(); });
     return false;

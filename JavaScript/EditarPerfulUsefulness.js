@@ -53,6 +53,4 @@ $("#pointForm").submit(function (e) {
     return false;
 });
 
-function changePage() {
-    //Falta Cambiar de Pagina
-}
+function changePage() { window.location.replace("../HTML/perfil.html"); }

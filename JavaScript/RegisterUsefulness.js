@@ -10,6 +10,6 @@ $("#userForm").submit(function (e) {
     var u = new User(0, email, name, surname, psswrd, null, null, null, null, null, null);
     addUser(u);
     store(email);
-    //changePage
+    window.location.replace("../HTML/perfil.html");
     return false;
 });

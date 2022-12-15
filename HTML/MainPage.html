@@ -1,0 +1,179 @@
+<html>
+<head>
+ <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.header{
+    background-color:black;
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+}
+.header h1{
+    color:white;
+}
+</style>
+<body>
+
+<div class="container-fluid">
+    <div class="header">
+        <h1>Employees</h1>
+    </div>
+    <!-- Add Employee area!-->
+    <div class="addButton">
+        <div class="row">
+            <div class="col-sm-10">
+                <h3>Employee Details</h3>
+            </div>
+            <div class="col-sm-2">
+                <form action="AddEmploye.html">
+                <button class="btn btn-success"><i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Add Employee</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-xs-">
+                        <label class="col-sm-2" for="ex1"><strong>Show entries</strong></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-control" id="number" type="number" value="10" placeholder="no of entries">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <label class="col-sm-2" for="ex1"><strong>Search</strong></label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" onkeyup="searchTable()" id="myInput" name="employe" width="20rem"placeholder="search for Employee" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee Details area-->
+    <div class="table-responsive" >
+        <table class="table table-bordered table-striped" id="myTable" data-pagination="true">
+            <thead>
+                <tr>
+                    <th data-field="email">Email</th>
+                    <th data-field="image">Image</th>
+                    <th data-field="status">Is Active</th>
+                    <th data-field="mobile">Mobile</th>
+                    <th data-field="college">College</th>
+                    <th data-field="name">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <!--modal content-->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h4>Toggle Employe Status</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button><br>
+                </div>
+                <div class="modal-body">
+                    <p style="color:red">Are you sure you want to disable this user?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+<!--Script for local storage -->
+<script>
+    var user = {
+        "employee": [
+            { 
+                "fName":"xxx",
+                "lName":"yyy",
+                "mobile":"12345678987",
+                "email":"xxx.xxx888@gmail.com", 
+                "image":'<img src="/home/chintu/Pictures/max volume.png" height="90" width="90"><br>',
+                "college":"IIT",
+                "status":'<i class="fa fa-times-circle" style="color:red; font-size:3em" data-toggle="modal" data-target="#myModal"></i>'
+            },
+            { 
+                "fName":"YYY",
+                "lName":"YYY",
+                "mobile":"98765434567",
+                "email":"yyy.yyy111@gmail.com", 
+                "image":'<img src="/home/chintu/Pictures/max volume.png" height="90" width="90"><br>',
+                "college":"NIT",
+                "status":'<i class="fa fa-check-circle" style="color:green; font-size:3em" data-toggle="modal" data-target="#myModal"></i>'
+            },
+
+
+        ]
+    };
+
+    var Data=JSON.stringify(user);
+    localStorage.setItem("userData", Data);
+    //get the stored data 
+    var Name=localStorage.getItem("userData");
+    //parse the data to JSON
+    var Obj=JSON.parse(Name);
+    //for debugging
+    console.log(Obj);
+
+    var i;
+    var k=Obj.employee.length;
+    console.log(k);
+    for(i=0;i<k;i++){
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        cell1.innerHTML=Obj.employee[i].email;
+        cell2.innerHTML=Obj.employee[i].image;
+        cell3.innerHTML=Obj.employee[i].status;
+        cell4.innerHTML=Obj.employee[i].mobile;
+        cell5.innerHTML=Obj.employee[i].college;
+        cell6.innerHTML='<button class="btn btn-warning" onclick="deleteRow(this)"><span style="color:white"><i class="fa fa-edit"></i>&nbsp;Delete</span></button>';   
+    }
+    function deleteRow(r) {
+
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("myTable").deleteRow(i);
+        delete Obj.employee[0];
+        console.log(Obj);
+    }
+
+</script>
+<!--Javascipt -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

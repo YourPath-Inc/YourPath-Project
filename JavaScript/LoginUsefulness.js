@@ -15,6 +15,6 @@ import { store } from "./Modules/LocalStorage.js"
 });
 
 function errorAlert() { 
-    //Alert
+    alert("ERROR: Algunos datos se han intoducido de maner erronea");
     console.log("Algo ha salido mal :(") 
 }

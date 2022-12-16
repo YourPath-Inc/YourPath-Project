@@ -130,11 +130,12 @@ body {
   align-items: center;
 }
 .navbar div.perfil_logo div.img_logo {
+  background-image: url(../maquetacion/Perfil.png);
+  background-size: contain;
   height: 50px;
   min-width: 50px;
   margin: 5px;
   border-radius: 50%;
-  background-color: #e8a860;
 }
 .navbar div.perfil_logo div.usuario {
   font-size: 18px;
@@ -186,13 +187,12 @@ body {
   color: #f5f5f5;
 }
 .perfil .foto {
-  background-color: #e8a860;
+  background-image: url(../maquetacion/Perfil.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 150px;
-  min-width: 100px;
+  min-width: 150px;
   margin-top: 10px;
-}
-.perfil .foto #foto-perfil {
-  height: 150px;
   border-radius: 50%;
 }
 .perfil .redes {
@@ -418,7 +418,6 @@ body {
     left: 90px;
   }
   .container {
-    width: 100%;
     padding-left: 120px;
     padding-right: 30px;
   }
@@ -452,28 +451,34 @@ body {
   }
 }
 footer {
-  margin-top: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+footer .footer {
   background-color: #0c0c0c;
   color: #f5f5f5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-footer .logo {
+footer .footer .logo {
   display: flex;
   flex-direction: row;
   height: auto;
   width: 50px;
   margin: 5px 20px;
 }
-footer .logo img {
+footer .footer .logo img {
   width: 100%;
   height: auto;
 }
-footer .follow a {
+footer .footer .follow a {
   color: #f5f5f5;
 }
-footer .derechos {
+footer .footer .derechos {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;

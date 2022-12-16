@@ -93,11 +93,11 @@ nav {
 }
 
 .welcome {
-  background-image: url("../maquetacion/homebg.webp");
+  background-image: url("../maquetacion/homebg.png");
   background-repeat: no-repeat;
   background-color: #f5f5f5;
   background-position: center;
-  height: 300px;
+  height: 100vh;
   .description {
     backdrop-filter: blur(12px) saturate(100%);
     -webkit-backdrop-filter: blur(12px) saturate(100%);

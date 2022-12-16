@@ -19,8 +19,9 @@ export function generateDiv(timelineType, arrayPoints) {
         date.innerHTML = arrayPoints[i].getInit_date();
         
         h2.innerHTML = arrayPoints[i].getTitulo();
+        console.log(arrayPoints[i].getTitulo());
         h2.className = "child_of_point_" + timelineType + "_" + (i + 1);
-        
+
         h3.innerHTML = arrayPoints[i].getLocation();
         h3.className = "child_of_point_" + timelineType + "_" + (i + 1);
         

@@ -42,7 +42,6 @@ $("#pointForm").submit(function (e) {
     var ubi = document.getElementById("location").value;
     var dateI = document.getElementById("init_date").value;
     var dateE = document.getElementById("end_date").value;
-    var ubi = document.getElementById("ubi").value;
     var descripcion = document.getElementById("point-description").value;
     var state;
     if (document.getElementById("state_done").checked) { state = document.getElementById("state_done").value; }

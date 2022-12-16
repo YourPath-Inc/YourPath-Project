@@ -9,10 +9,10 @@ export class Point {
         this.location = location;
     }
 
-    gettitulo() { return this.titulo; }
-    getinit_date() { return this.init_date; }
-    getend_date() { return this.end_date; }
-    getdescripcion() { return this.descripcion; }
+    getTitulo() { return this.titulo; }
+    getInit_date() { return this.init_date; }
+    getEnd_date() { return this.end_date; }
+    getDescripcion() { return this.descripcion; }
     getState() { return this.state; }
     getLocation() { return this.location; }
 }

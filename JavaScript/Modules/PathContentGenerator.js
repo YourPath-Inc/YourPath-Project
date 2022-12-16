@@ -16,14 +16,15 @@ export function generateDiv(timelineType, arrayPoints) {
         content.className = "content";
         
         date.className = "date";
-        date.innerHTML = arrayPoints[i].getInitDate();
+        date.innerHTML = arrayPoints[i].getInit_date();
         
-        h2.innerHTML = arrayPoints[i].getTitle();
+        h2.innerHTML = arrayPoints[i].getTitulo();
         h2.className = "child_of_point_" + timelineType + "_" + (i + 1);
+        
         h3.innerHTML = arrayPoints[i].getLocation();
         h3.className = "child_of_point_" + timelineType + "_" + (i + 1);
         
-        p.innerHTML = arrayPoints[i].getDescription();
+        p.innerHTML = arrayPoints[i].getDescripcion();
         p.className = "child_of_point_" + timelineType + "_" + (i + 1);
 
         isStart = !isStart;

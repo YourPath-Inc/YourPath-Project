@@ -16,6 +16,7 @@ getUserByEmail(email).then((data) => {
     document.getElementById("user-description").value = data.descripcion;
     document.getElementById("linkedin").value = data.link;
     document.getElementById("git").value = data.github;
+    document.getElementById("edit-perfil-name-usuario").innerHTML = data.nombre + " " + data.apellido;
     psswrd = data.psswrd;
     id = data.id;
 });
@@ -31,9 +32,13 @@ $("#userForm").submit(function (e) {
     var link = document.getElementById("linkedin").value;
     var git = document.getElementById("git").value;
     var u = new User(id, email, name, surname, psswrd, tel, ubi, date, description, git, link);
-    updateUserById(id, u);
-    store(email);
-    changePage("../HTML/perfil.html");
+    if (tel.lenght <= 9) { 
+        updateUserById(id, u);
+        store(email);
+        changePage("../HTML/perfil.html");
+    } else {
+        alert("ERROR: El telefono no puede contenter mas de 9 numeros");
+    }
     return false;
 });
 

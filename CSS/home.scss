@@ -1,7 +1,8 @@
 body {
     background: -webkit-linear-gradient(bottom, #e3bf96, #e0841a);
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vw;
+    min-height: 100vh;
     margin: 0px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
@@ -90,6 +91,7 @@ nav {
 
 .welcome{
     background-image: url("../maquetacion/homebg.webp");
+    background-repeat: no-repeat;
     background-color: #f5f5f5;
     background-position: center;
     height: 300px;

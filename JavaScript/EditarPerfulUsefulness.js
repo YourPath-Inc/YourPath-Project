@@ -1,8 +1,10 @@
 import {addPoint, addUser, getUserByEmail, updateUserById} from "./Modules/APIConsultor.js"
 import { User } from "./Modules/UserClass.js"
 import { Point } from "./Modules/PointClass.js"
+import { show, store } from "./Modules/LocalStorage.js"
 
-var email = "email@email.com"; //Cambiar esto por los datos que se pasen
+var email = show();
+console.log(email);
 var psswrd, id;
 getUserByEmail(email).then((data) => {
     document.getElementById("name").value = data.nombre;
@@ -30,7 +32,8 @@ $("#userForm").submit(function (e) {
     var git = document.getElementById("git").value;
     var u = new User(id, email, name, surname, psswrd, tel, ubi, date, description, git, link);
     updateUserById(id, u);
-    changePage();
+    store(email);
+    changePage("../HTML/perfil.html");
     return false;
 });
 
@@ -39,7 +42,6 @@ $("#pointForm").submit(function (e) {
     var ubi = document.getElementById("location").value;
     var dateI = document.getElementById("init_date").value;
     var dateE = document.getElementById("end_date").value;
-    var ubi = document.getElementById("ubi").value;
     var descripcion = document.getElementById("point-description").value;
     var state;
     if (document.getElementById("state_done").checked) { state = document.getElementById("state_done").value; }
@@ -48,10 +50,8 @@ $("#pointForm").submit(function (e) {
     var p = new Point(id, titulo, dateI, dateE, descripcion, state, ubi);
     console.log(p);
     addPoint(p);
-    changePage();
+    changePage("../HTML/editarPerfil.html");
     return false;
 });
 
-function changePage() {
-    //Falta Cambiar de Pagina
-}
+function changePage(url) { window.location.replace(url); }

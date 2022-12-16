@@ -1,8 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background: -webkit-linear-gradient(bottom, #e3bf96, #e0841a);
   background-repeat: no-repeat;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
   margin: 0px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
@@ -132,6 +136,7 @@ nav .buttons .register {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 }
 .info .infoq {
   backdrop-filter: blur(12px) saturate(100%);
@@ -146,7 +151,9 @@ nav .buttons .register {
   align-items: center;
   flex-direction: column;
 }
-.info .infoq h2, .info .infoq h3, .info .infoq p {
+.info .infoq h2,
+.info .infoq h3,
+.info .infoq p {
   margin: 5px 10px;
 }
 .info .infoq ul {
@@ -164,27 +171,34 @@ nav .buttons .register {
 }
 
 footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+footer .footer {
   background-color: #0c0c0c;
   color: #f5f5f5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-footer .logo {
+footer .footer .logo {
   display: flex;
   flex-direction: row;
   height: auto;
   width: 50px;
   margin: 5px 20px;
 }
-footer .logo img {
+footer .footer .logo img {
   width: 100%;
   height: auto;
 }
-footer .follow a {
+footer .footer .follow a {
   color: #f5f5f5;
 }
-footer .derechos {
+footer .footer .derechos {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;

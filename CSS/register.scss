@@ -1,9 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 a {
   text-decoration: none;
 }
 body {
   background: -webkit-linear-gradient(bottom, #e8a860, #e0841a);
-  min-height: 100vh;
   background-repeat: no-repeat;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   margin: 0;
@@ -131,6 +134,12 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #0c0c0c !important;
 }
 footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+.footer {
   background-color: #0c0c0c;
   color: #f5f5f5;
   display: flex;
@@ -160,4 +169,5 @@ footer {
     font-size: 10px;
     margin-right: 10px;
   }
+}
 }

@@ -1,7 +1,7 @@
 import { getUserByEmail } from "./Modules/APIConsultor.js";
 import { store } from "./Modules/LocalStorage.js"
 
-(".form").submit(() => {
+$(".form").submit(() => {
     var email = document.getElementById("user-email").value;
     getUserByEmail(email).then((data) => {
         var psswrd = document.getElementById("user-password").value;

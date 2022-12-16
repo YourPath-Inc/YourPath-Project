@@ -98,11 +98,11 @@ nav .buttons .register {
 }
 
 .welcome {
-  background-image: url("../maquetacion/homebg.webp");
+  background-image: url("../maquetacion/homebg.png");
   background-repeat: no-repeat;
   background-color: #f5f5f5;
   background-position: center;
-  height: 300px;
+  height: 100vh;
 }
 .welcome .description {
   backdrop-filter: blur(12px) saturate(100%);

@@ -12,18 +12,6 @@ var u = await getUserByEmail(email);
 var points = await getPointsByIdUser(u.id);
 var timelinePoints = [], timelinePointsC = [], timelinePointsF = [];
 
-$(".triangulo").hover(() => {
-    setTimeout(() => { 
-        showTimeline("timeline");
-    }, 0);
-    setTimeout(() => { 
-        showTimeline("timeline_c");
-    }, points.length * 1000);
-    setTimeout(() => { 
-        showTimeline("timeline_f");
-    }, points.length * 2000);
-});
-
 for (var i = 0; i < points.length; i++) {
     var point = points[i];
     var p = new Point(point.user_id, point.titulo, point.init_date, point.end_date,  point.descripcion, point.state, point.location)
@@ -44,7 +32,17 @@ generateDiv("timeline", timelinePoints);
 generateDiv("timeline_c", timelinePointsC);
 generateDiv("timeline_f", timelinePointsF);
 
-document.getElementById("nameUser").innerHTML = "TestNameUser";
-document.getElementById("dateUser").innerHTML = "TestDateUser";
-document.getElementById("telUser").innerHTML = "TestTelUser";
-document.getElementById("emailUser").innerHTML = "TestEmailUser";
+document.getElementById("nameUser").innerHTML = u.nombre;
+document.getElementById("dateUser").innerHTML = u.fecha_nacimiento;
+document.getElementById("telUser").innerHTML = u.tel;
+document.getElementById("emailUser").innerHTML = u.email;
+
+setTimeout(() => { 
+    showTimeline("timeline");
+}, 0);
+setTimeout(() => { 
+    showTimeline("timeline_c");
+}, timelinePoints.length * 1000);
+setTimeout(() => { 
+    showTimeline("timeline_f");
+}, timelinePoints.length * 1000 + timelinePointsC.length * 1000);

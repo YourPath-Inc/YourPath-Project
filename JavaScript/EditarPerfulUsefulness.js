@@ -32,7 +32,7 @@ $("#userForm").submit(function (e) {
     var link = document.getElementById("linkedin").value;
     var git = document.getElementById("git").value;
     var u = new User(id, email, name, surname, psswrd, tel, ubi, date, description, git, link);
-    if (tel.lenght <= 9) { 
+    if (tel <= 999999999) { 
         updateUserById(id, u);
         store(email);
         changePage("../HTML/perfil.html");

@@ -36,9 +36,10 @@ document.getElementById("nameUser").innerHTML = u.nombre;
 document.getElementById("dateUser").innerHTML = u.fecha_nacimiento;
 document.getElementById("telUser").innerHTML = u.tel;
 document.getElementById("emailUser").innerHTML = u.email;
+document.getElementById("locUser").innerHTML = u.ubicacion;
 document.getElementById("linkedin-link").href = u.link;
 document.getElementById("git-link").href = u.git;
-
+document.getElementById("descUser").innerText = u.descripcion;
 
 setTimeout(() => { 
     showTimeline("timeline");

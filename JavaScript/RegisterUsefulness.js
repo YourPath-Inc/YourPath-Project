@@ -12,18 +12,16 @@ $("#userForm").submit(function (e) {
     var name = document.getElementById("user-name").value;
     var surname = document.getElementById("user-surname").value;
     var u = new User(0, email, name, surname, psswrd, null, null, null, null, null, null);
-    getAllUsers().then((results) => {
-        var flag = true;
-        for (var i = 0; i < results.length && flag; i++) {
-            if (results[i].email == email) { flag = false; }
-        }
-        if (flag) {
-            addUser(u);
-            store(email);
-            window.location.replace("../HTML/editarPerfil.html");
-        } else {
-            alert("ERROR: Email ya registrado");
-        }
+    if (psswrd == document.getElementById("user-password-confirm").value) {
+        getAllUsers().then((results) => {
+            var flag = true;
+            for (var i = 0; i < results.length && flag; i++) { if (results[i].email == email) { flag = false; } }
+            if (flag) {
+                addUser(u);
+                store(email);
+                window.location.replace("../HTML/editarPerfil.html");
+            } else { alert("ERROR: email en uso"); }
     });
+    } else { alert("ERROR: Las contraseñas no son identicas"); }
     return false;
 });

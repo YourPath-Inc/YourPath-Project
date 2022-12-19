@@ -62,7 +62,12 @@ public class ApiController {
 	
 	@PostMapping(value = "/addUser")
 	public void addUsers(@RequestBody Users u) { 
-		userService.addUser(u);
+		Iterable<Users> users = userService.findAll();
+		boolean flag = true;
+		for (Users user : users) {
+			if (user.getEmail().equals(u.getEmail())) { flag = false; }
+		}
+		if (flag) { userService.addUser(u); }
 	}
 	
 	@PostMapping(value = "/updateUser", params = "user_id")

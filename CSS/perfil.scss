@@ -347,16 +347,19 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #e8a860;
+  overflow: auto;
 }
 .container .content h3 {
   font-size: 18px;
   color: #f5f5f5;
+  overflow: auto;
 }
 .container .content p {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
   color: #f5f5f5;
+  overflow: auto;
 }
 #timeline_c .container::before {
   background: #696969;

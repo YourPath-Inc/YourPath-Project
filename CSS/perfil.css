@@ -57,13 +57,34 @@ body {
 
 .content {
   height: 350px;
+  overflow: auto;
 }
 
-.content h2, .content h3, .content p {
+.content h2,
+.content h3,
+.content p {
   visibility: hidden;
 }
 
-#timeline, #timeline_c, #timeline_f {
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0841a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e3bf96;
+}
+
+#timeline,
+#timeline_c,
+#timeline_f {
   height: 0px;
   visibility: hidden;
 }
@@ -175,7 +196,7 @@ body {
   text-decoration: none;
 }
 .navbar div.perfil_logo .dropdown-content a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #e8a860;
 }
 

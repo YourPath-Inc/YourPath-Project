@@ -130,6 +130,22 @@ nav .buttons .register {
   margin: 10px 40px;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0841a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e3bf96;
+}
+
 .info {
   border-top: solid #0c0c0c 1px;
   box-shadow: 1px 2px 8px rgb(0, 0, 0);

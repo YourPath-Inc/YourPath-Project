@@ -23,6 +23,22 @@ label {
   font-size: 11pt;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0841a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e3bf96;
+}
+
 #forgot-pass {
   color: #e0841a;
   font-size: 10pt;

@@ -247,7 +247,18 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #505050 inset !important;
 }
-
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0841a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e3bf96;
+}
 input:-webkit-autofill{
   -webkit-text-fill-color: #f5f5f5 !important;
 }

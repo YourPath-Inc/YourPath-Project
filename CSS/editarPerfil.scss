@@ -67,11 +67,12 @@ nav {
     align-items: center;
 
     div.img_logo {
+      background-image: url(../maquetacion/Perfil.png);
+      background-size: contain;
       height: 50px;
       min-width: 50px;
       margin: 5px;
       border-radius: 50%;
-      background-color: #e8a860;
     }
     div.usuario {
       font-size: 18px;

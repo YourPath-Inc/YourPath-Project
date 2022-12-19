@@ -73,11 +73,12 @@ nav div.perfil_logo {
   align-items: center;
 }
 nav div.perfil_logo div.img_logo {
+  background-image: url(../maquetacion/Perfil.png);
+  background-size: contain;
   height: 50px;
   min-width: 50px;
   margin: 5px;
   border-radius: 50%;
-  background-color: #e8a860;
 }
 nav div.perfil_logo div.usuario {
   font-size: 18px;

@@ -488,6 +488,7 @@ footer {
   bottom: 0;
   width: 100%;
   overflow: hidden;
+  z-index: 100;
 }
 footer .footer {
   background-color: #0c0c0c;

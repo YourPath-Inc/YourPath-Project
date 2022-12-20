@@ -16,7 +16,7 @@ export function generateDiv(timelineType, arrayPoints) {
         content.className = "content";
         
         date.className = "date";
-        date.innerHTML = arrayPoints[i].getInit_date();
+        date.innerHTML = arrayPoints[i].getInit_date() + " - " + arrayPoints[i].getEnd_date();
         
         h2.innerHTML = arrayPoints[i].getTitulo();
         console.log(arrayPoints[i].getTitulo());

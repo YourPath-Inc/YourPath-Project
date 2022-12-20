@@ -31,7 +31,7 @@ public class ApiController {
 		return userService.findAll();
 	}
 
-	@RequestMapping(value = "/	", params = "email")
+	@RequestMapping(value = "/user", params = "email")
 	public Optional<Users> getUserById(@RequestParam String email) {
 		Iterable<Users> users = userService.findAll();
 		Users f = null;

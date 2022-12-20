@@ -16,7 +16,7 @@ import lombok.Data;
 @Table(name="usuario")
 public class Users{
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
     private Long id;
     @Column(name="email")

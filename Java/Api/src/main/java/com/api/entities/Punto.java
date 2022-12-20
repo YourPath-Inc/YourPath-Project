@@ -14,7 +14,7 @@ import lombok.Data;
 @Table(name="punto")
 public class Punto {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="punto_id")
     private Long id;
     @Column(name="user_id")

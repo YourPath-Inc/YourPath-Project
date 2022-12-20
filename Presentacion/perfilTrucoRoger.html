@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourPath</title>
+    <link rel="stylesheet" href="../CSS/perfil.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="../maquetacion/logo.png" alt="YourPath"></a>
+        </div>
+        <div class="buscador">
+            <form>
+                <input id="search" type="search" placeholder="Busca path..." autofocus required />
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="perfil_logo">
+            <div class="img_logo"></div>
+            <div class="usuario lineUp"></div>
+            <div class="dropdown">
+                <button>≡</button>
+                <div class="dropdown-content">
+                <a href="perfil.html">Mi perfil</a>
+                <a href="editarPerfil.html">Editar perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="perfil">
+        <div class="foto">
+        </div>
+        <div class="datos">
+            <ul>
+                <li id="nameUser"></li>
+                <li id ="dateUser"></li>
+                <li id="telUser"></li>
+                <li id="emailUser"></li>
+                <li id="locUser"></li>
+            </ul>
+        </div>
+        <div class="redes">
+            <div id="linkedin">
+                <a id="linkedin-link" target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div id="github">
+                <a id="git-link" target="_blank"href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="descPerfil">
+        <p id="descUser">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius officiis nemo suscipit eos, facere aliquid architecto perferendis eaque distinctio doloribus illum, delectus quas unde, mollitia esse dolorum at enim!</p>
+    </div>
+    <div class="triangulo"></div>
+    <div id="timeline"></div>
+    <div id="timeline_c"></div>
+    <div id="timeline_f"></div>
+    <footer>
+        <div class="footer">
+            <div class="logo"><img src="../maquetacion/logo.png" alt="YourPath"></div>
+            <div class="follow"><p>Follow us   
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </p></div>
+            <div class="derechos"><p>© 2022 YourPath, S.A. Todos los derechos reservados en todo el mundo</p></div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="module" src="../JavaScript/Modules/PathContentGenerator.js"></script>
+    <script type="module" src="../JavaScript/Modules/PathAnimation.js"></script>
+    <script type="module" src="../JavaScript/Modules/APIConsultor.js"></script>
+    <script type="module" src="./RogerTruco.js"></script>
+</body>
+</html>

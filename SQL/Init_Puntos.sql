@@ -7,7 +7,7 @@ INSERT INTO `yourpath`.`punto` (`user_id`, `titulo`, `init_date`, `end_date`, `d
     ('1', 'Gestor ERP (SAP)', '2022', '2022', 'Aptitudes: Java · SQL · SAP ERP · Acceso a mercados · Mantenimiento informático · Servicio de atención al cliente · Gestión de contenido web', 'DONE', 'Neovideo Digital, S.L'),
     ('1', 'CFG Desarrollo de aplicaciones multiplataforma', '2020', '2022', '', 'DONE', 'Escoles Universitàries Gimbernat Formació'),
     ('1', 'Bootcamp Java (215h)', '2020', '2022', 'Programación y diseño de Software, desarrollo WEB (Html, Css, BootStrap, Javascript y jQuery), Bases de datos (SQL Server), Desarollo orientado a objetos con Java y Spring Boot', 'DOING', 'Fundació Esplai'),
-    ('1', 'YourPath BackEnd Developer', 'Future', 'Future', 'PENDIENE', 'TODO', 'Fundacio Esplai'),
+    ('1', 'YourPath BackEnd Developer', 'Fut', ' ', 'PENDIENE', 'TODO', 'Fundacio Esplai'),
     
     -- Puntos Ismael
     ('2', 'CFGS Programación Multiplataforma Orientada al Ocio Digital y al Desarrollo de Videojuegos', 'sept 2020', 'jun 2021', '', 'DONE', 'ITB'),
@@ -18,7 +18,7 @@ INSERT INTO `yourpath`.`punto` (`user_id`, `titulo`, `init_date`, `end_date`, `d
 		- Desarrollo web con HTML, CSS, BootStrap, JavaScript y jQuery. 
 		- Manejo de bases de datos SQL (MySQL).
 		- Programación con Java SE y creación de API REST con Spring Boot.', 'DOING', 'Fundación Esplai'),
-	('2', 'YourPath FullStack Developer', 'Future', 'Future', '', 'TODO', 'Fundación Esplai'),
+	('2', 'YourPath FullStack Developer', 'Fut', 'Fut', '', 'TODO', 'Fundación Esplai'),
     
     -- Puntos Roger
         ('3', 'Bachillerato Tecnológico con Selectividad Aprobada', 'sept 2015', 'jun 2017', '', 'DONE', 'Escola Tecnos/Institut Montserrat Roig'),

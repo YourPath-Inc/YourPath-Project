@@ -32,7 +32,7 @@ generateDiv("timeline", timelinePoints);
 generateDiv("timeline_c", timelinePointsC);
 generateDiv("timeline_f", timelinePointsF);
 
-document.getElementById("nameUser").innerHTML = u.nombre;
+document.getElementById("nameUser").innerHTML = u.nombre + " " + u.apellido;
 document.getElementById("dateUser").innerHTML = u.fecha_nacimiento;
 document.getElementById("telUser").innerHTML = u.tel;
 document.getElementById("emailUser").innerHTML = u.email;
